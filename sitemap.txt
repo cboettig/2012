@@ -1,5 +1,8 @@
  
+http://www.carlboettiger.info/2012/archive.html  
+http://www.carlboettiger.info/2012/categories.html  
 http://www.carlboettiger.info/2012/sitemap.txt  
+http://www.carlboettiger.info/2012/tags.html  
 http://www.carlboettiger.info/2012/wordpress/archives/4791/index.html  
 http://www.carlboettiger.info/2012/archives/4791/index.html  
 http://www.carlboettiger.info/2012/wordpress/archives/5/index.html  
