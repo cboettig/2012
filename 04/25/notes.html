@@ -6,12 +6,12 @@
   <meta name="author" content="Carl Boettiger" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- HTML5 metadata -->
-<meta name="keywords" content="nonparametric-bayes" />
+<meta name="keywords" content="" />
 <meta name="description" content="" />
 <!-- RDFa Metadata (in DublinCore) -->
 <meta property="dc:title" content="Notes" />
 <meta property="dc:creator" content="Carl Boettiger" />
-<meta property="dc:date" content="2013-04-25 00:00:00 +0000" />
+<meta property="dc:date" content="2012-04-25 00:00:00 +0000" />
 <meta property="dc:format" content="text/html" />
 <meta property="dc:language" content="en" />
 <meta property="dc:identifier" content="/04/25/notes.html" />
@@ -24,14 +24,14 @@
 <meta property="og:author" content="http://www.carlboettiger.info/index.html#me" />  <!-- Should be Liquid? URI? -->
 <meta property="http://ogp.me/ns/profile#first_name" content="Carl"/>
 <meta property="http://ogp.me/ns/profile#last_name" content="Boettiger"/>
-<meta property="http://ogp.me/ns/article#published_time" content="2013-04-25 00:00:00 +0000" />
+<meta property="http://ogp.me/ns/article#published_time" content="2012-04-25 00:00:00 +0000" />
 <meta property="og:site_name" content="Lab Notebook" /> <!-- Same as dc:source? -->
 <meta property="og:url" content="http://www.carlboettiger.info/04/25/notes.html" />
 <meta property="og:type" content="website" /> 
 <!-- Google Scholar Metadata -->
 <!--
 <meta name="citation_author" content="Carl Boettiger"/>
-<meta name="citation_date" content="2013-04-25 00:00:00 +0000"/>
+<meta name="citation_date" content="2012-04-25 00:00:00 +0000"/>
 <meta name="citation_title" content="Notes"/>
 <meta name="citation_journal_title" content="Lab Notebook"/>
 -->
@@ -106,41 +106,13 @@
       <div class="row">
   <div class="col-md-7 col-md-offset-1">
     <article>
-    <ul>
-<li>finish pmc post from Tuesday (done).<br /></li>
-<li>Submit comment reply (done).</li>
-</ul>
-<h2 id="nonparametric-bayes">Nonparametric-bayes</h2>
+    <p>Working on IGPS Presentation.</p>
+<p>Experimenting with recent tools for Amazon cloud computing via R. <a href="https://github.com/armstrtw/AWS.tools">Whit Armstrong’s packages</a> seem like a good place to start, but some trouble with credentials on both this and on Segue at the moment.</p>
+<p>Submitted nominations for EVE Seminar. Splitting nominations among the theory group, this year I’ve filed nominations for</p>
 <ul>
-<li>Finishing up parametric vs nonparametric Bayes comparison runs</li>
-<li>Need to add parametric Bayesian mean to the state-space diagram, fig 1</li>
-<li>Compare with uniform priors on inverse standard deviations (precision)</li>
-<li>Sensitivity analysis</li>
-<li>mcmc convergence analysis for both Bayesian approaches</li>
-<li>See allen.md example scripts in BUGS/, adapted to post soon</li>
-</ul>
-<h3 id="code-tricks">Code tricks</h3>
-<p><strong>Plotting tricks</strong></p>
-<ul>
-<li>Selecting the order in the simulation legend requires declaring the model types as an ordered factor instead of a character,</li>
-</ul>
-<pre class="sourceCode r"><code class="sourceCode r">dt$method =<span class="st"> </span><span class="kw">factor</span>(dt$method, <span class="dt">ordered=</span><span class="ot">TRUE</span>, <span class="dt">levels=</span><span class="kw">names</span>(OPT))</code></pre>
-<p>and then set custom colors and match colors to the desired factor labels with <code>scale_colour_manual</code>, and override <code>alpha</code> for legends,</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(dt) +<span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time, fishstock, <span class="dt">group=</span><span class="kw">interaction</span>(reps,method), <span class="dt">color=</span>method), <span class="dt">alpha=</span>.<span class="dv">1</span>) +
-<span class="st">    </span><span class="kw">scale_colour_manual</span>(<span class="dt">values=</span>colorkey, <span class="dt">guide =</span> <span class="kw">guide_legend</span>(<span class="dt">override.aes =</span> <span class="kw">list</span>(<span class="dt">alpha =</span> <span class="dv">1</span>)))</code></pre>
-<ul>
-<li>Avoid having density plots appear as crude polygons using <code>stat_density</code> instead of <code>geom_density</code> and set <code>geom</code> to path. Need a ymax (not clear why?) or set <code>position=&quot;identity&quot;</code> as shown,:</li>
-</ul>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(posteriors, <span class="kw">aes</span>(value)) +<span class="st"> </span><span class="kw">stat_density</span>(<span class="dt">geom=</span><span class="st">&quot;path&quot;</span>, <span class="dt">position=</span><span class="st">&quot;identity&quot;</span>, <span class="dt">alpha=</span><span class="fl">0.7</span>)</code></pre>
-<ul>
-<li><a href="https://gist.github.com/bluegraybox/1998129">initialize ssh-agent in .bashrc</a></li>
-<li>Or for single session: <code>ssh-agent bash</code>, <code>ssh-add ~/.ssh/id_rda</code></li>
-</ul>
-<h3 id="misc">Misc</h3>
-<ul>
-<li>whoops, got into discussion of a fictional world of data publishing in the <a href="http://dynamicecology.wordpress.com/2013/04/08/selective-journals-vs-social-networks-alternative-ways-of-filtering-the-literature-or-po-tay-to-po-tah-to/#comment-15439">comments at dynamicecology</a></li>
-<li>Speaking of <a href="http://dynamicecology.wordpress.com/2013/04/16/prioritizing-manuscripts-and-having-data-go-unpublished-for-lack-of-time">data publishing issues on dynamicecology</a>…</li>
+<li><a href="http://resource.wur.nl/en/wetenschap/detail/ecologist_marten_scheffer_the_spirit_must_be_free">Marten Scheffer (profile)</a></li>
+<li><a href="http://www.science.org.au/scientists/interviews/p/hp.html">Hugh Possingham (profile)</a></li>
+<li><a href="http://dragonfly.ecology.uga.edu/drakelab">John Drake</a></li>
 </ul>
 
     </article>
@@ -149,17 +121,17 @@
     <div class="sidebar">
       <aside prefix="og:http://ogp.me/ns/article#">
   <p> <i class="icon-calendar"></i>
-    <time datetime="2013-04-25 00:00:00 +0000" 
-    property="dc:created">25 Apr 2013</time></p>
+    <time datetime="2012-04-25 00:00:00 +0000" 
+    property="dc:created">25 Apr 2012</time></p>
    
 
  <br />
 
   
-	<p><a class="btn btn-default" rel="prev" href='/2012/04/24/empirical-demonstration-of-that-clever-derivation.html'><i class="icon-chevron-left"></i> prev</a>
+	<p><a class="btn btn-default" rel="prev" href='/2012/04/19/catching-up.html'><i class="icon-chevron-left"></i> prev</a>
   
   
-  <a class="btn btn-default" rel="next" href='/2012/04/26/notebook-features-introduction.html'>next <i class="icon-chevron-right"></i></a></p>
+  <a class="btn btn-default" rel="next" href='/2012/04/26/2012-04-20.html'>next <i class="icon-chevron-right"></i></a></p>
   
 
   <br />
@@ -167,7 +139,7 @@
   <p> <a  onclick="recordOutboundLink(this, 'Outbound Links', 'history'); 
             return false;" 
           class="btn btn-default" 
-          href="https://github.com/cboettig/2012/commits/master/_posts/2013-04-25-notes.md"><i class="icon-time"></i> history</a></p>
+          href="https://github.com/cboettig/2012/commits/master/_posts/2012-04-25-notes.md"><i class="icon-time"></i> history</a></p>
 
   <br />
 
@@ -179,10 +151,6 @@
     </p>
 
   <p> <i class="icon-tag"></i> tags: 
-    
-    <!-- http://schema.org/BlogPosting/keywords -->
-    <a rel="og:tag" class="tag" 
-			href="/2012/tags.html#nonparametric-bayes">#nonparametric-bayes</a>
     </p>
 
   <br/>
@@ -190,7 +158,7 @@
   
 
   <br/>
-  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/431b735325d48078b64efae364af2e2b7374e963/_posts/2013-04-25-notes.md"> 431b735325d48078b64efae364af2e2b7374e963</a></small></p>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/e2502c46613c0f8360e959e593ceacbe8e84775a/_posts/2012-04-25-notes.md"> e2502c46613c0f8360e959e593ceacbe8e84775a</a></small></p>
     
   <br/>
   
@@ -284,7 +252,7 @@
       &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
       &amp;rft.title=Notes
       &amp;rft.creator=Carl Boettiger
-      &amp;rft.date=2013-04-25
+      &amp;rft.date=2012-04-25
       &amp;rft.language=EN
       &amp;rft.rights=CC0
       &amp;rft_id=http://www.carlboettiger.info/04/25/notes.html">
