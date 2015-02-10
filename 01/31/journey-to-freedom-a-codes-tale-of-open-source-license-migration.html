@@ -126,7 +126,7 @@
 <h2 id="licensing-in-r">Licensing in R</h2>
 <p>R uses a simple but powerful license format in the DESCRIPTION files of all packages, which contain the essential meta-data for the package. Common FOSS licenses are recognized automatically (including version numbers or version inequalities). Since CC0 doesn’t (yet) make this list, we can use a custom license file where we provide the full plaintext CC0 license in the file LICENSE and write “file LICENSE” in the DESCRIPTION (<a href="https://github.com/cboettig/fluctuationDomains">my example</a>).</p>
 <p>We can also see the frequency with which various licenses are used on the R repository, CRAN, with a few lines of code:</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 p =<span class="st"> </span><span class="kw">available.packages</span>(contrib.
 <span class="kw">url</span>(<span class="st">&quot;http://cran.r-project.org&quot;</span>), <span class="dt">type =</span> <span class="st">&quot;source&quot;</span>)
 <span class="kw">sort</span>(<span class="kw">table</span>(p[, <span class="st">&quot;License&quot;</span>]))</code></pre>

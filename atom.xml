@@ -4,7 +4,7 @@
  <title>Lab Notebook</title>
  <link href="/2012/atom.xml" rel="self"/>
  <link href="/"/>
- <updated>2015-01-20T04:22:32+00:00</updated>
+ <updated>2015-02-10T20:37:36+00:00</updated>
  <id>http://www.carlboettiger.info/2012</id>
  <author>
    <name>Carl Boettiger</name>
@@ -346,7 +346,6 @@ redcarpet:
 &lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;dat &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;read.table&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;http://www.carlboettiger.info/assets/data/mei.csv&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;header=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- html table generated in R 2.15.2 by xtable 1.7-0 package --&gt;
 &lt;!-- Mon Dec 17 15:31:58 2012 --&gt;
-
 &lt;p&gt;For the moment let’s ignore annual structure and just collapse this into timeseries sampled bimonthly.&lt;/p&gt;
 &lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(reshape2)
 dt &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;(dat, &lt;span class=&quot;dt&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;YEAR&amp;quot;&lt;/span&gt;)
@@ -1104,7 +1103,7 @@ p2&lt;/code&gt;&lt;/pre&gt;
 	 <link href="/2012/11/23/citing-lab-notebook-entries.html"/>
    <updated>2012-11-23T00:00:00+00:00</updated>
    <id>/11/23/citing-lab-notebook-entries</id>
-   <content type="html">&lt;p&gt;C. Titus Brown has an excellent &lt;a href=&quot;http://ivory.idyll.org/blog/posting-blog-entries-to-figshare.html&quot;&gt;post&lt;/a&gt; discussing his exploration into the merits and technicalities cross-posting his blog posts to figshare. The &lt;a href=&quot;https://github.com/ropensci/rfigshare&quot;&gt;&lt;code&gt;rfigshare&lt;/code&gt; package&lt;/a&gt; written by &lt;a href=&quot;http://emhart.github.com/&quot;&gt;Ted Hart&lt;/a&gt; and myself can do just this, once we puzzled out some of the same challenges (Notes to Titus: though the documentation doesn’t mention it, you can get a programmatic list of available categories from &lt;a href=&quot;http://api.figshare.com/v1/categories&quot;&gt;http://api.figshare.com/v1/categories&lt;/a&gt;. Figshare can also take code as a fileset or dataset, and may soon add a type for it. The coolest thing about figshare is perhaps the way they add types in response to how they see users using the service).&lt;/p&gt;
+   <content type="html">&lt;p&gt;C. Titus Brown has an excellent &lt;a href=&quot;http://ivory.idyll.org/blog/posting-blog-entries-to-figshare.html&quot;&gt;post&lt;/a&gt; discussing his exploration into the merits and technicalities cross-posting his blog posts to figshare. The &lt;a href=&quot;https://github.com/ropensci/rfigshare&quot;&gt;&lt;code&gt;rfigshare&lt;/code&gt; package&lt;/a&gt; written by &lt;a href=&quot;http://emhart.github.com/&quot;&gt;Ted Hart&lt;/a&gt; and myself can do just this, once we puzzled out some of the same challenges (Notes to Titus: though the documentation doesn’t mention it, you can get a programmatic list of available categories from &lt;a href=&quot;http://api.figshare.com/v1/categories&quot; class=&quot;uri&quot;&gt;http://api.figshare.com/v1/categories&lt;/a&gt;. Figshare can also take code as a fileset or dataset, and may soon add a type for it. The coolest thing about figshare is perhaps the way they add types in response to how they see users using the service).&lt;/p&gt;
 &lt;p&gt;The real discussion, though, is not about &lt;em&gt;how&lt;/em&gt;, but &lt;em&gt;why&lt;/em&gt;? Currently figshare doesn’t render the html or markdown/restructured-text source (other than as plain text), so it’s not a great place to &lt;em&gt;read&lt;/em&gt; the posts. This may change in the near future as well, but the primary motivation for doing this seems to be on the ability to get an honest-to-goodness DOI for your entry. So why a DOI?&lt;/p&gt;
 &lt;p&gt;The answer most often put forward is that “a DOI facilitates citing a paper in the formal literature.” I think that’s not entirely accurate. For one, the formal literature has no trouble citing things that do not have a DOI. Perhaps the answer is meant to mean track citations to my content, &lt;em&gt;e.g.&lt;/em&gt; for statistical/impact purposes. This may be closer to the mark, but it still needs work. What counts depends on whose doing the counting. Anyone browsing the citation counts of a work through different mediums has surely encountered Thompson-Reuters has very specific criteria to be included, so I don’t believe they are tracking citations to anything with a DOI. Nor, I think is Scopus. Perhaps the target is Google then?&lt;/p&gt;
 &lt;p&gt;If you want Google Scholar to count the number of citations to your blog post, I have good news for you. You do not need a DOI and cross-posting to figshare. You just need to follow the &lt;a href=&quot;http://scholar.google.com/intl/en/scholar/inclusion.html#indexing&quot;&gt;metadata requirements&lt;/a&gt; as outlined by Google Scholar itself. This will help Google Scholar identify your blog post as a academic object, and add it to your profile. Anything indexed by Google scholar that cites your blog post will count as a reference. The basics are really simple. Have metadata such as:&lt;/p&gt;
@@ -1463,7 +1462,7 @@ p2&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;Let &lt;span class=&quot;math&quot;&gt;\(\mathbf{P}\)&lt;/span&gt; be the &lt;span class=&quot;math&quot;&gt;\(n_x\)&lt;/span&gt; by &lt;span class=&quot;math&quot;&gt;\(n_h\)&lt;/span&gt; matrix of all possible profits in a time step, as given by &lt;span class=&quot;math&quot;&gt;\(\Pi(x_i, h_j)\)&lt;/span&gt;, where rows represent possible stock sizes and columns possible harvests.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Let &lt;span class=&quot;math&quot;&gt;\(\mathbf{M}\)&lt;/span&gt; be the row-normalized &lt;span class=&quot;math&quot;&gt;\(n_y\)&lt;/span&gt; by &lt;span class=&quot;math&quot;&gt;\(n_x\)&lt;/span&gt; matrix whose elements are &lt;span class=&quot;math&quot;&gt;\(z_m(y_i, x_j)\)&lt;/span&gt;, the probability of observing a stock size &lt;span class=&quot;math&quot;&gt;\(y_i\)&lt;/span&gt; from a true size &lt;span class=&quot;math&quot;&gt;\(x_j\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Let &lt;span class=&quot;math&quot;&gt;\(\mathbf{I}\)&lt;/span&gt; be the row-normalized &lt;span class=&quot;math&quot;&gt;\(n_h\)&lt;/span&gt; by &lt;span class=&quot;math&quot;&gt;\(n_q\)&lt;/span&gt; matrix whose elements are &lt;span class=&quot;math&quot;&gt;\(z_i(h_i, q_j)\)&lt;/span&gt;, the probability of implementing a harvest &lt;span class=&quot;math&quot;&gt;\(h_i\)&lt;/span&gt; given a quota &lt;span class=&quot;math&quot;&gt;\(q_j\)&lt;/span&gt; &lt;strong&gt;Edit&lt;/strong&gt;: I had been created in the code as &lt;span class=&quot;math&quot;&gt;\(n_q\)&lt;/span&gt; by &lt;span class=&quot;math&quot;&gt;\(n_h\)&lt;/span&gt;, so had to be transposed.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Let &lt;span class=&quot;math&quot;&gt;\(\mathbf{F}_q\)&lt;/span&gt; be the tensor of row-normalized &lt;span class=&quot;math&quot;&gt;\(n_q\)&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\(n_x\)&lt;/span&gt; by &lt;span class=&quot;math&quot;&gt;\(n_x\)&lt;/span&gt; transition matrices given by &lt;span class=&quot;math&quot;&gt;\(z_g(x_j,  \sum_i \sum_j f(x_i, h_j) \mathbf{M}[y_k, x_i] \mathbf{I}[h_j, q_l] )\)&lt;/span&gt;. By summing over the uncertainty in measurement and implementation, &lt;span class=&quot;math&quot;&gt;\(\mathbf{F}_q\)&lt;/span&gt; is in the space of observed state &lt;span class=&quot;math&quot;&gt;\(y_t\)&lt;/span&gt; into the true stock at the next timestep &lt;span class=&quot;math&quot;&gt;\(x_{t+1}\)&lt;/span&gt;, given quota &lt;span class=&quot;math&quot;&gt;\(q\)&lt;/span&gt;. We transfer into the future measured state through another application of &lt;span class=&quot;math&quot;&gt;\(\mathbf{M} \mathbf{F}_q\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Let &lt;span class=&quot;math&quot;&gt;\(\mathbf{F}_q\)&lt;/span&gt; be the tensor of row-normalized &lt;span class=&quot;math&quot;&gt;\(n_q\)&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\(n_x\)&lt;/span&gt; by &lt;span class=&quot;math&quot;&gt;\(n_x\)&lt;/span&gt; transition matrices given by &lt;span class=&quot;math&quot;&gt;\(z_g(x_j, \sum_i \sum_j f(x_i, h_j) \mathbf{M}[y_k, x_i] \mathbf{I}[h_j, q_l] )\)&lt;/span&gt;. By summing over the uncertainty in measurement and implementation, &lt;span class=&quot;math&quot;&gt;\(\mathbf{F}_q\)&lt;/span&gt; is in the space of observed state &lt;span class=&quot;math&quot;&gt;\(y_t\)&lt;/span&gt; into the true stock at the next timestep &lt;span class=&quot;math&quot;&gt;\(x_{t+1}\)&lt;/span&gt;, given quota &lt;span class=&quot;math&quot;&gt;\(q\)&lt;/span&gt;. We transfer into the future measured state through another application of &lt;span class=&quot;math&quot;&gt;\(\mathbf{M} \mathbf{F}_q\)&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The profits expected given a measurement of the stock &lt;span class=&quot;math&quot;&gt;\(y\)&lt;/span&gt; for a quota &lt;span class=&quot;math&quot;&gt;\(q\)&lt;/span&gt; are &lt;span class=&quot;math&quot;&gt;\(\sum_j \sum_i \Pi(x_i, h_j) p(x_i | y) p(h_j | q)\)&lt;/span&gt;. Hence the matrix of expected profits for each possible combination of &lt;span class=&quot;math&quot;&gt;\(y_i\)&lt;/span&gt; and &lt;span class=&quot;math&quot;&gt;\(q_j\)&lt;/span&gt; is given by the matrix product &lt;span class=&quot;math&quot;&gt;\(\mathbf{M} \mathbf{P} \mathbf{I} =: \mathbf{Q}\)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Let &lt;span class=&quot;math&quot;&gt;\(\mathbf{V}_t\)&lt;/span&gt; be the &lt;span class=&quot;math&quot;&gt;\(n_y\)&lt;/span&gt; by &lt;span class=&quot;math&quot;&gt;\(n_q\)&lt;/span&gt; matrix at time &lt;span class=&quot;math&quot;&gt;\(t\)&lt;/span&gt; giving the value of choosing quota &lt;span class=&quot;math&quot;&gt;\(q_j\)&lt;/span&gt; having observed stock &lt;span class=&quot;math&quot;&gt;\(y_i\)&lt;/span&gt; and having selected the optimal &lt;span class=&quot;math&quot;&gt;\(q_{t+1} \ldots q_{t_{\textrm{max}}}\)&lt;/span&gt;, that is:&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -2099,7 +2098,6 @@ y_p &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
    <id>/10/17/basic-regression-in-gaussian-processes</id>
    <content type="html">&lt;p&gt;Working out coded examples for basic Gaussian process regression using R. I’ve just read through the first few chapters of &lt;a href=&quot;http://www.GaussianProcess.org/gpml&quot;&gt;Rasmussen &amp;amp; Williams (2006)&lt;/a&gt;, this implements the examples discussed in Chapter 2.1-2.5.&lt;/p&gt;
 &lt;!-- Also motivated by [James Keirstead](http://www.jameskeirstead.ca/r/gaussian-process-regression-with-r/), with cleaner code.  --&gt;
-
 &lt;p&gt;Required R libraries (for multivariate normal, also for plotting):&lt;/p&gt;
 &lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(MASS)
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(reshape2)
@@ -2234,7 +2232,7 @@ fig2c&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;embedding-dimensions&quot;&gt;Embedding dimensions&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;[Taken’s Theorem](http://en.wikipedia.org/wiki/Takens’_theorem) But how about the stochastic case?&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Takens&amp;#39;_theorem&quot;&gt;Taken’s Theorem&lt;/a&gt; But how about the stochastic case?&lt;/li&gt;
 &lt;li&gt;Convergent cross-mapping paper, &lt;a href=&quot;http://dx.doi.org/10.1126/science.1227079&quot;&gt;Sugihara et al. 2012&lt;/a&gt;, recently in &lt;em&gt;Science&lt;/em&gt;.&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Stochastic Takens: perhaps see &lt;a href=&quot;http://www.ucl.ac.uk/cnda/about/papers/Random_Embed.pdf&quot;&gt;Stark et al 2003&lt;/a&gt;, doi:10.1007/s00332-003-0534-4&lt;/li&gt;
 &lt;/ul&gt;
@@ -3039,36 +3037,44 @@ linear &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;dt[, &lt;span cla
 &lt;h2 id=&quot;code-tricks-for-today&quot;&gt;Code tricks for today&lt;/h2&gt;
 &lt;p&gt;vim set sytnax language, useful for getting R highlighting in &lt;code&gt;.Rmd&lt;/code&gt; files: &lt;code&gt;setf r&lt;/code&gt;, or equivalently, &lt;code&gt;set filetype=r&lt;/code&gt; (must be lowercase r). &lt;code&gt;set filetype&lt;/code&gt; with no argument gives the current filetype.&lt;/p&gt;
 &lt;h3 id=&quot;coding&quot;&gt;Coding&lt;/h3&gt;
-&lt;ul&gt;&lt;li&gt;
-cboettig pushed to master at cboettig/2012: &lt;em&gt;lab notebook page tidy up&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/2012/compare/73a363fddf...dd31603a43&quot;&gt;04:19 2015/01/20&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt;
-cboettig commented on issue cboettig/nonparametric-bayes#52: &lt;em&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;davharris&quot;&gt;@davharris&lt;/span&gt; Thanks for the heads up. Do you think it would be worth implementing a more robust / general purpose R package to provide these GP funct…&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/nonparametric-bayes/issues/52#issuecomment-70563255&quot;&gt;09:22 2015/01/19&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt;
-cboettig pushed to master at cboettig/dockerfiles: &lt;em&gt;adjust install location by prefix&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/dockerfiles/compare/dfc8d2a8a0...bb8eafa52e&quot;&gt;09:04 2015/01/19&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt;
-cboettig pushed to master at cboettig/dockerfiles: &lt;em&gt;update makefile&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/dockerfiles/compare/8f5eedc0c5...dfc8d2a8a0&quot;&gt;08:26 2015/01/19&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt;
-cboettig closed issue cboettig/pdg_control#45: &lt;em&gt;quadratic costs added as supplement only&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues/45&quot;&gt;07:48 2015/01/19&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt;
-cboettig commented on issue cboettig/pdg_control#45: &lt;em&gt;done&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues/45#issuecomment-70550068&quot;&gt;07:48 2015/01/19&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt;
-cboettig closed issue cboettig/pdg_control#48: &lt;em&gt;Next steps for Carl&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues/48&quot;&gt;07:48 2015/01/19&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt;
-cboettig closed issue cboettig/pdg_control#47: &lt;em&gt;Next steps for Paul&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues/47&quot;&gt;07:48 2015/01/19&lt;/a&gt;
-&lt;/li&gt;&lt;/ul&gt;
-
-
+&lt;ul&gt;
+&lt;li&gt;
+cboettig pushed to gh-pages at cboettig/2011: &lt;em&gt;Site updated&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/2011/compare/996295912f...483c4f720e&quot;&gt;08:42 2015/02/10&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+cboettig created tag 2013-archive at cboettig/2013: &lt;em&gt;&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/2013/tree/2013-archive&quot;&gt;08:41 2015/02/10&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+cboettig pushed to master at cboettig/2009: &lt;em&gt;update gemfile, makefile&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/2009/compare/33d3fdacf1...d81c5f69dc&quot;&gt;08:41 2015/02/10&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+cboettig created tag 2010-archive at cboettig/2010: &lt;em&gt;&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/2010/tree/2010-archive&quot;&gt;08:40 2015/02/10&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+cboettig pushed to gh-pages at cboettig/2013: &lt;em&gt;Site updated&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/2013/compare/9842c87c3a...e51d6af895&quot;&gt;08:40 2015/02/10&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+cboettig created tag 2009-archive at cboettig/2009: &lt;em&gt;&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/2009/tree/2009-archive&quot;&gt;08:40 2015/02/10&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+cboettig created tag 2014-archive at cboettig/2014: &lt;em&gt;&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/2014/tree/2014-archive&quot;&gt;08:39 2015/02/10&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+cboettig pushed to master at cboettig/2014: &lt;em&gt;make needs not bash&lt;/em&gt; &lt;a href=&quot;https://github.com/cboettig/2014/compare/01848669de...5b77b80f3a&quot;&gt;08:39 2015/02/10&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&quot;reading&quot;&gt;Reading&lt;/h3&gt;
-&lt;ul&gt;&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+Recent shifts in the occurrence , cause , and magnitude of animal mass mortality events: Proc. Natl. Acad. Sci. U.SA. (2014). Pages: 6-11. Samuel B Fey, Adam M Siepielski, Sébastien Nusslé, Kristina Cervantes-yoshida, Jason L Hwan et al. &lt;a href=&quot;/research/recent-shifts-occurrence-cause-magnitude-animal-mass-mortality-events-2/&quot;&gt;05:16 2015/01/23&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
 Predicting climate-driven regime shifts versus rebound potential in coral reefs: Nature (2015). Nicholas A J Graham, Simon Jennings, M Aaron Macneil, David Mouillot, Shaun K Wilson et al. &lt;a href=&quot;http://www.mendeley.com/c/7545217584/g/634301/graham-2015-predicting-climate-driven-regime-shifts-versus-rebound-potential-in-coral-reefs/&quot;&gt;07:03 2015/01/15&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
 Inference for dynamic and latent variable models via iterated, perturbed Bayes maps.: Proceedings of the National Academy of Sciences of the United States of America (2015). Edward L Ionides, Dao Nguyen, Yves Atchadé, Stilian Stoev, Aaron a King et al. &lt;a href=&quot;http://www.mendeley.com/c/7541156094/g/634301/ionides-2015-inference-for-dynamic-and-latent-variable-models-via-iterated-perturbed-bayes-maps/&quot;&gt;10:27 2015/01/14&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt;
-Model selection for ecologists: the worldviews of AIC and BIC: Ecology (2014). Volume: 95, Issue: March. Pages: 631-636. K Aho, DW Derryberry, T Peterson et al. &lt;a href=&quot;http://www.mendeley.com/c/7460512214/g/634301/aho-2014-model-selection-for-ecologists-the-worldviews-of-aic-and-bic/&quot;&gt;09:34 2014/11/30&lt;/a&gt;
-&lt;/li&gt;&lt;/ul&gt;
-
-
-
+&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  
@@ -3273,9 +3279,8 @@ puts &lt;span class=&quot;dt&quot;&gt;Octokit&lt;/span&gt;.markdown(&lt;span cla
 &lt;h2 id=&quot;ropensci-tutorial-thursday&quot;&gt;rOpenSci tutorial, Thursday&lt;/h2&gt;
 &lt;p&gt;A year out from our launch at ESA last year, we presented an introduction and tutorial on rOpenSci. Slides and links to more information are all available at &lt;a href=&quot;http://esa.ropensci.org&quot;&gt;esa.ropensci.org&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;slides-from-my-talk-friday&quot;&gt;Slides from my talk, Friday&lt;/h2&gt;
-&lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/13962709?hostedIn=slideshare&amp;page=upload&quot; width=&quot;476&quot; height=&quot;400&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
-
-
+&lt;iframe src=&quot;http://www.slideshare.net/slideshow/embed_code/13962709?hostedIn=slideshare&amp;amp;page=upload&quot; width=&quot;476&quot; height=&quot;400&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot;&gt;
+&lt;/iframe&gt;
 &lt;h2 id=&quot;twitter-notes-generated-from-r&quot;&gt;Twitter Notes (generated from R)&lt;/h2&gt;
 &lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;library&lt;/span&gt;(twitteR)
 hashtag &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;quot;#ESA2012&amp;quot;&lt;/span&gt;
@@ -3324,24 +3329,22 @@ text2&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;for any non-trivial &lt;span class=&quot;math&quot;&gt;\(Z_t\)&lt;/span&gt;. So how do we enforce that these decreases do not violate the self-sustaining principle?&lt;br /&gt;It would seem to require at least that &lt;span class=&quot;math&quot;&gt;\(Z_t\)&lt;/span&gt; is a function of &lt;span class=&quot;math&quot;&gt;\(X\)&lt;/span&gt; as well?&lt;/p&gt;
 &lt;p&gt;Reed seems to imply that this is a much more trivial requirement, such as stating only that &lt;span class=&quot;math&quot;&gt;\(f(x)\)&lt;/span&gt; is compensating density dependence (such as Beverton Holt), and not overcompensating (such as the discrete logistic).&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues/23&quot;&gt;Write a flat tex outline for policy costs&lt;/a&gt; (&lt;font color=&quot;#02e10c&quot;&gt;policy costs&lt;/font&gt;)
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues/21&quot;&gt;Compare the probability of detection in managed and unmanaged models. &lt;/a&gt; (&lt;font color=\&quot;#02d7e1\&quot;&gt;resilience thinking&lt;/font&gt;)
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues/20&quot;&gt;Confirm Reed S==D theorem, evaluate in Sethi context&lt;/a&gt; (&lt;font color=&quot;#0b02e1&quot;&gt;value of information&lt;/font&gt;) See notes below.
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues/18&quot;&gt;Run scenarios with very low noise, instead of deterministic&lt;/a&gt; (&lt;font color=&quot;#0b02e1&quot;&gt;value of information&lt;/font&gt;), running for &lt;code&gt;uniform_logistic&lt;/code&gt; now
 &lt;/li&gt;
-&lt;li&gt; 
+&lt;li&gt;
 &lt;a href=&quot;https://github.com/cboettig/pdg_control/issues/17&quot;&gt;Re-run bias table with measurement noise&lt;/a&gt; (&lt;font color=&quot;#0b02e1&quot;&gt;value of information&lt;/font&gt;). Done, compare against history.
 &lt;/li&gt;
 &lt;/ul&gt;
-
-
 &lt;h3 id=&quot;other&quot;&gt;Other&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;PRSB review&lt;/li&gt;
@@ -3366,17 +3369,14 @@ text2&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Interesting leadership training session lead by improv acting professional Raquel Holmes of &lt;a href=&quot;http://www.improvscience.org/&quot;&gt;ImprovScience&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;video-recording-of-my-talk&quot;&gt;Video recording of my talk&lt;/h2&gt;
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/xwIIVdyKe4o&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/xwIIVdyKe4o&quot; frameborder=&quot;0&quot; allowfullscreen&gt;
+&lt;/iframe&gt;
 &lt;h2 id=&quot;slides&quot;&gt;Slides:&lt;/h2&gt;
 &lt;object id=&quot;__sse13817733&quot; width=&quot;212&quot; height=&quot;178&quot;&gt;
 &lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=boettiger-120731130512-phpapp02&amp;stripped_title=regime-shifts-in-ecology-and-evolution&amp;userName=cboettig&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;wmode&quot; value=&quot;transparent&quot;/&gt;
-&lt;embed name=&quot;__sse13817733&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=boettiger-120731130512-phpapp02&amp;stripped_title=regime-shifts-in-ecology-and-evolution&amp;userName=cboettig&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; wmode=&quot;transparent&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;
-
-
-
-
+&lt;embed name=&quot;__sse13817733&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=boettiger-120731130512-phpapp02&amp;amp;stripped_title=regime-shifts-in-ecology-and-evolution&amp;amp;userName=cboettig&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; wmode=&quot;transparent&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;
+&lt;/embed&gt;
+&lt;/object&gt;
 </content>
  </entry>
  
@@ -3805,7 +3805,7 @@ View more presentations from &lt;a href=&quot;http://www.slideshare.net/cboettig
 &lt;p&gt;The project creates tools in the form of R packages – a powerful data-manipulation and visualization environment familiar to many researchers – that interface with the major data repositories to make serious data exploration and analysis easy and script-able. We hope to provide a model other researchers and databases can replicate for interfacing with researchers, interfacing with R.  Our packages are open-source and developed in the open from their inception.  The rOpenSci project is becoming a means of discovering just how many databases are available, and a common environment in which to allow them to interact. In the past year the project has won a software award, $5,000 support for a full-time summer intern, attracted a world-class set of advisors, and authored 28 different software packages.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://creativecommons.org/publicdomain/zero/1.0/&quot;&gt;CC0&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;All sofware open-source &lt;a href=&quot;https://github.com/ropensci&quot;&gt;https://github.com/ropensci&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;All sofware open-source &lt;a href=&quot;https://github.com/ropensci&quot; class=&quot;uri&quot;&gt;https://github.com/ropensci&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
  </entry>
@@ -4032,7 +4032,7 @@ value &amp;lt;-&lt;span class=&quot;st&quot;&gt;  &lt;/span&gt;&lt;span class=&q
 &lt;li&gt;author Carl Boettiger, &lt;script type=&quot;text/javascript&quot;&gt;
 &lt;!--
 h=&#39;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&#39;;a=&#39;&amp;#64;&#39;;n=&#39;&amp;#x63;&amp;#98;&amp;#x6f;&amp;#x65;&amp;#116;&amp;#116;&amp;#x69;&amp;#x67;&#39;;e=n+a+h;
-document.write(&#39;&lt;a h&#39;+&#39;ref&#39;+&#39;=&quot;ma&#39;+&#39;ilto&#39;+&#39;:&#39;+e+&#39;&quot;&gt;&#39;+e+&#39;&lt;\/&#39;+&#39;a&#39;+&#39;&gt;&#39;);
+document.write(&#39;&lt;a h&#39;+&#39;ref&#39;+&#39;=&quot;ma&#39;+&#39;ilto&#39;+&#39;:&#39;+e+&#39;&quot; clas&#39;+&#39;s=&quot;em&#39; + &#39;ail&quot;&gt;&#39;+e+&#39;&lt;\/&#39;+&#39;a&#39;+&#39;&gt;&#39;);
 // --&gt;
 &lt;/script&gt;&lt;noscript&gt;&amp;#x63;&amp;#98;&amp;#x6f;&amp;#x65;&amp;#116;&amp;#116;&amp;#x69;&amp;#x67;&amp;#32;&amp;#x61;&amp;#116;&amp;#32;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#32;&amp;#100;&amp;#x6f;&amp;#116;&amp;#32;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/noscript&gt;&lt;/li&gt;
 &lt;li&gt;license: CC0&lt;/li&gt;
@@ -4145,7 +4145,7 @@ document.write(&#39;&lt;a h&#39;+&#39;ref&#39;+&#39;=&quot;ma&#39;+&#39;ilto&#39
 &lt;p&gt;Then we can generate a citation given a DOI with the &lt;code&gt;ref&lt;/code&gt; function:&lt;/p&gt;
 &lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;r &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;ref&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;10.1111/j.1461-0248.2005.00827.x&amp;quot;&lt;/span&gt;)
 &lt;span class=&quot;kw&quot;&gt;print&lt;/span&gt;(r, &lt;span class=&quot;st&quot;&gt;&amp;quot;html&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting For Uncertainty in Marine Reserve Design.” &lt;em&gt;Ecology Letters&lt;/em&gt;, 9. ISSN 1461-023X, &lt;a href=&quot;http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x&quot;&gt;http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting For Uncertainty in Marine Reserve Design.” &lt;em&gt;Ecology Letters&lt;/em&gt;, 9. ISSN 1461-023X, &lt;a href=&quot;http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Note that R allows bibitems to print in a variety of formats, including html.&lt;/p&gt;
 &lt;p&gt;We can generate inline citations in the short name/date format with the &lt;code&gt;citet&lt;/code&gt; function:&lt;/p&gt;
 &lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;citet&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;10.1111/j.1461-0248.2005.00827.x&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
@@ -4201,12 +4201,12 @@ http://yihui.name/knitr/&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;generating-the-final-bibliography&quot;&gt;Generating the final bibliography&lt;/h2&gt;
 &lt;p&gt;As we go along adding inline citations, R stores the list of citation info. Then at the end of the document, use this command to print the bibliography generated by the use of our inline citations.&lt;/p&gt;
 &lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;&lt;span class=&quot;kw&quot;&gt;bibliography&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;html&amp;quot;&lt;/span&gt;) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting For Uncertainty in Marine Reserve Design.” &lt;em&gt;Ecology Letters&lt;/em&gt;, &lt;strong&gt;9&lt;/strong&gt;. ISSN 1461-023X, &lt;a href=&quot;http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x&quot;&gt;http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Abrams PA, Ruokolainen L, Shuter BJ and Mccann KS (2012). “Harvesting Creates Ecological Traps: Consequences of Invisible Mortality Risks in Predator-Prey Metacommunities.” &lt;em&gt;Ecology&lt;/em&gt;, &lt;strong&gt;93&lt;/strong&gt;. ISSN 0012-9658, &lt;a href=&quot;http://dx.doi.org/10.1890/11-0011.1&quot;&gt;http://dx.doi.org/10.1890/11-0011.1&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Michaels S and Tyre AJ (2012). “How Indeterminism Shapes Ecologists’ Contributions to Managing Socio-Ecological Systems.” &lt;em&gt;Conservation Letters&lt;/em&gt;. &lt;a href=&quot;http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x&quot;&gt;http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Halpern BS, Pyke CR, Fox HE, Haney JC, Schlaepfer MA and Zaradic P (2006). “Gaps And Mismatches Between Global Conservation Priorities And Spending.” &lt;em&gt;Conservation Biology&lt;/em&gt;, &lt;strong&gt;20&lt;/strong&gt;. &lt;a href=&quot;http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x&quot;&gt;http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Xie Y (2012). &lt;em&gt;knitr: A general-purpose package for dynamic report generation in R&lt;/em&gt;. R package version 0.5.4, &lt;a href=&quot;http://yihui.name/knitr/&quot;&gt;http://yihui.name/knitr/&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Francois R (2011). &lt;em&gt;bibtex: bibtex parser&lt;/em&gt;. R package version 0.3-0, &lt;a href=&quot;http://CRAN.R-project.org/package=bibtex&quot;&gt;http://CRAN.R-project.org/package=bibtex&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Halpern BS, Regan HM, Possingham HP and Mccarthy MA (2006). “Accounting For Uncertainty in Marine Reserve Design.” &lt;em&gt;Ecology Letters&lt;/em&gt;, &lt;strong&gt;9&lt;/strong&gt;. ISSN 1461-023X, &lt;a href=&quot;http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1111/j.1461-0248.2005.00827.x&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Abrams PA, Ruokolainen L, Shuter BJ and Mccann KS (2012). “Harvesting Creates Ecological Traps: Consequences of Invisible Mortality Risks in Predator-Prey Metacommunities.” &lt;em&gt;Ecology&lt;/em&gt;, &lt;strong&gt;93&lt;/strong&gt;. ISSN 0012-9658, &lt;a href=&quot;http://dx.doi.org/10.1890/11-0011.1&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1890/11-0011.1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Michaels S and Tyre AJ (2012). “How Indeterminism Shapes Ecologists’ Contributions to Managing Socio-Ecological Systems.” &lt;em&gt;Conservation Letters&lt;/em&gt;. &lt;a href=&quot;http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1111/j.1755-263X.2012.00241.x&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Halpern BS, Pyke CR, Fox HE, Haney JC, Schlaepfer MA and Zaradic P (2006). “Gaps And Mismatches Between Global Conservation Priorities And Spending.” &lt;em&gt;Conservation Biology&lt;/em&gt;, &lt;strong&gt;20&lt;/strong&gt;. &lt;a href=&quot;http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1111/j.1523-1739.2005.00258.x&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Xie Y (2012). &lt;em&gt;knitr: A general-purpose package for dynamic report generation in R&lt;/em&gt;. R package version 0.5.4, &lt;a href=&quot;http://yihui.name/knitr/&quot; class=&quot;uri&quot;&gt;http://yihui.name/knitr/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Francois R (2011). &lt;em&gt;bibtex: bibtex parser&lt;/em&gt;. R package version 0.3-0, &lt;a href=&quot;http://CRAN.R-project.org/package=bibtex&quot; class=&quot;uri&quot;&gt;http://CRAN.R-project.org/package=bibtex&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;reflections&quot;&gt;Reflections&lt;/h2&gt;
 &lt;p&gt;We could have justed printed bibliography in plain text format using with &lt;code&gt;bibliography()&lt;/code&gt;. Note that it contains only the citations created with the inline citation commands &lt;code&gt;citet&lt;/code&gt; and &lt;code&gt;citep&lt;/code&gt;, in the order cited. All of these citations are stored in a hidden options variable in R when the inline functions are called. To reset the citation list (&lt;em&gt;i.e.&lt;/em&gt; empty the contents of “bibliography()”) we can use the &lt;code&gt;cleanbib()&lt;/code&gt; command, or set the option &lt;code&gt;bibliography(erase=TRUE)&lt;/code&gt;. Typically we could hide the bibliography chunk using a inline knitr call or the chunk option “echo=FALSE”.&lt;/p&gt;
 &lt;p&gt;I hope to add markup to format this a bit more nicely later. For instance, we want the links to appear as real links. Additionally, we may want to add markup around the citations, such as the reason for the citation into the link using the &lt;a href=&quot;http://speroni.web.cs.unibo.it/cgi-bin/lode/req.py?req=http:/purl.org/spar/cito&quot;&gt;Citation Typing Ontology&lt;/a&gt;. Ideally I need a method to support different citation styles, even though it is silly in today’s world that the citation format is still a choice of the &lt;em&gt;publisher&lt;/em&gt; and not a choice of the &lt;em&gt;reader&lt;/em&gt;. This will probably require citeproc integration and a major upgrade. Please report any bugs, feature requests or citations on the &lt;a href=&quot;https://github.com/cboettig/knitcitations/issues&quot;&gt;Github issues tracker!&lt;/a&gt;&lt;/p&gt;
@@ -4783,7 +4783,7 @@ Filtering. _The Annals of Statistics_, *39*. ISSN 0090-5364,
 &lt;li&gt;&lt;p&gt;Simon N. Wood, (2010) Statistical Inference For Noisy Nonlinear Ecological Dynamic Systems. &lt;em&gt;Nature&lt;/em&gt; &lt;strong&gt;466&lt;/strong&gt; &lt;a href=&quot;http://dx.doi.org/10.1038/nature09319&quot;&gt;10.1038/nature09319&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;E. L. Ionides, C. Breto, A. A. King, (2006) Inference For Nonlinear Dynamical Systems. &lt;em&gt;Proceedings of The National Academy of Sciences&lt;/em&gt; &lt;strong&gt;103&lt;/strong&gt; &lt;a href=&quot;http://dx.doi.org/10.1073/pnas.0603181103&quot;&gt;10.1073/pnas.0603181103&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;T. Toni, D. Welch, N. Strelkowa, A. Ipsen, M. P.H Stumpf, (2009) Approximate Bayesian Computation Scheme For Parameter Inference And Model Selection in Dynamical Systems. &lt;em&gt;Journal of The Royal Society Interface&lt;/em&gt; &lt;strong&gt;6&lt;/strong&gt; &lt;a href=&quot;http://dx.doi.org/10.1098/rsif.2008.0172&quot;&gt;10.1098/rsif.2008.0172&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Ioannis Kevrekidis, William Gear, James Hyman, Panagiotis Kevrekidid, Olof Runborg, Constantinos Theodoropoulos, (2003) Equation-Free, Coarse-Grained Multiscale Computation: Enabling Mocroscopic Simulators to Perform System-Level Analysis. &lt;em&gt;Communications in Mathematical Sciences&lt;/em&gt; &lt;a href=&quot;http://projecteuclid.org/euclid.cms/1119655353&quot;&gt;http://projecteuclid.org/euclid.cms/1119655353&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ioannis Kevrekidis, William Gear, James Hyman, Panagiotis Kevrekidid, Olof Runborg, Constantinos Theodoropoulos, (2003) Equation-Free, Coarse-Grained Multiscale Computation: Enabling Mocroscopic Simulators to Perform System-Level Analysis. &lt;em&gt;Communications in Mathematical Sciences&lt;/em&gt; &lt;a href=&quot;http://projecteuclid.org/euclid.cms/1119655353&quot; class=&quot;uri&quot;&gt;http://projecteuclid.org/euclid.cms/1119655353&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;exploring-iterative-filtering-in-pomp&quot;&gt;Exploring Iterative Filtering in POMP&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/cboettig/populationdynamics/blob/497d4ce4c401833464ccaff6edd518133f4e9b0c/inst/examples/pomp_explore.md&quot;&gt;my example exploration&lt;/a&gt;, following the &lt;a href=&quot;http://cran.at.r-project.org/web/packages/pomp/vignettes/intro_to_pomp.pdf&quot;&gt;introductory vignette.&lt;/a&gt;&lt;/p&gt;
@@ -5085,9 +5085,9 @@ high energy use --------------- low energy use&lt;/code&gt;&lt;/pre&gt;
 	 <link href="/2012/05/03/testing-out-a-jekyll-based-notebook.html"/>
    <updated>2012-05-03T10:50:13+00:00</updated>
    <id>/05/03/testing-out-a-jekyll-based-notebook</id>
-   <content type="html">&lt;p&gt;I &lt;a href=&quot;http://carlboettiger.info/lab-notebook.html&quot;&gt;am trying out Jekyll&lt;/a&gt; as an alternative to Wordpress for powering this site and my open lab notebook. If you subscribe, the new RSS (atom) feed for the new notebook is at &lt;a href=&quot;http://carlboettiger.info/atom.xml&quot;&gt;http://carlboettiger.info/atom.xml&lt;/a&gt;. I’d love to hear any feedback, good or bad, about the switch.  A recent post gives &lt;a href=&quot;http://www.carlboettiger.info/OpenScience/2012/05/01/Jekyll-vs-Wordpress.html&quot;&gt;my own reflections&lt;/a&gt;.  The site’s &lt;a href=&quot;https://github.com/cboettig/jekyll-source/&quot;&gt;source-code is available on github&lt;/a&gt;.&lt;/p&gt;
+   <content type="html">&lt;p&gt;I &lt;a href=&quot;http://carlboettiger.info/lab-notebook.html&quot;&gt;am trying out Jekyll&lt;/a&gt; as an alternative to Wordpress for powering this site and my open lab notebook. If you subscribe, the new RSS (atom) feed for the new notebook is at &lt;a href=&quot;http://carlboettiger.info/atom.xml&quot; class=&quot;uri&quot;&gt;http://carlboettiger.info/atom.xml&lt;/a&gt;. I’d love to hear any feedback, good or bad, about the switch.  A recent post gives &lt;a href=&quot;http://www.carlboettiger.info/OpenScience/2012/05/01/Jekyll-vs-Wordpress.html&quot;&gt;my own reflections&lt;/a&gt;.  The site’s &lt;a href=&quot;https://github.com/cboettig/jekyll-source/&quot;&gt;source-code is available on github&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;navigating-two-platforms&quot;&gt;Navigating two platforms&lt;/h2&gt;
-&lt;p&gt;The Wordpress site now lives at &lt;a href=&quot;http://carlboettiger.info/wordpress&quot;&gt;http://carlboettiger.info/wordpress&lt;/a&gt;, while the new Jekyll site lives at the root domain: &lt;a href=&quot;http://carlboettiger.info&quot;&gt;http://carlboettiger.info&lt;/a&gt;. All former links to the wordpress site will still work (though they are also available with “wordpress” in the url).  Enjoy the faster, simpler site.&lt;/p&gt;
+&lt;p&gt;The Wordpress site now lives at &lt;a href=&quot;http://carlboettiger.info/wordpress&quot; class=&quot;uri&quot;&gt;http://carlboettiger.info/wordpress&lt;/a&gt;, while the new Jekyll site lives at the root domain: &lt;a href=&quot;http://carlboettiger.info&quot; class=&quot;uri&quot;&gt;http://carlboettiger.info&lt;/a&gt;. All former links to the wordpress site will still work (though they are also available with “wordpress” in the url).  Enjoy the faster, simpler site.&lt;/p&gt;
 </content>
  </entry>
  
@@ -5195,7 +5195,7 @@ high energy use --------------- low energy use&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;author Carl Boettiger, &lt;script type=&quot;text/javascript&quot;&gt;
 &lt;!--
 h=&#39;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&#39;;a=&#39;&amp;#64;&#39;;n=&#39;&amp;#x63;&amp;#98;&amp;#x6f;&amp;#x65;&amp;#116;&amp;#116;&amp;#x69;&amp;#x67;&#39;;e=n+a+h;
-document.write(&#39;&lt;a h&#39;+&#39;ref&#39;+&#39;=&quot;ma&#39;+&#39;ilto&#39;+&#39;:&#39;+e+&#39;&quot;&gt;&#39;+e+&#39;&lt;\/&#39;+&#39;a&#39;+&#39;&gt;&#39;);
+document.write(&#39;&lt;a h&#39;+&#39;ref&#39;+&#39;=&quot;ma&#39;+&#39;ilto&#39;+&#39;:&#39;+e+&#39;&quot; clas&#39;+&#39;s=&quot;em&#39; + &#39;ail&quot;&gt;&#39;+e+&#39;&lt;\/&#39;+&#39;a&#39;+&#39;&gt;&#39;);
 // --&gt;
 &lt;/script&gt;&lt;noscript&gt;&amp;#x63;&amp;#98;&amp;#x6f;&amp;#x65;&amp;#116;&amp;#116;&amp;#x69;&amp;#x67;&amp;#32;&amp;#x61;&amp;#116;&amp;#32;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#32;&amp;#100;&amp;#x6f;&amp;#116;&amp;#32;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/noscript&gt;&lt;/li&gt;
 &lt;li&gt;license: CC0&lt;/li&gt;
@@ -6116,7 +6116,7 @@ out &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;h3 id=&quot;parametric-uncertainty&quot;&gt;Parametric Uncertainty&lt;/h3&gt;
 &lt;p&gt;Biological state equation &lt;span class=&quot;math&quot;&gt;\[ x_{t+1} = z_t f(x_t, h_t, a_t) P(a_t, \hat a_t, \sigma_t) \]&lt;/span&gt; Bayesian Learning state equations &lt;span class=&quot;math&quot;&gt;\[ \hat a_{t+1} = \textrm{Posterior}(a | x) = \frac{ L(x|a) \textrm{Prior}(a)}{\int  L(x|a) \textrm{Prior}(a) da } \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Myopic learning just evolves the original SDP problem over the stopping time, integrating over the fixed uncertainty, but updates only to the next time-step. It then implements the optimal next step, observes the system, updates the uncertainty, and then repeats the SDP over this updated uncertainty. This scales as &lt;span class=&quot;math&quot;&gt;\(n^2\)&lt;/span&gt; times the action-space, since the SDP need not consider possible belief states.&lt;/p&gt;
-&lt;p&gt;Adaptive learning includes the belief states in the state dynamics. Even summarized as a distribution with two summary statistics, this involves a transition matrix of &lt;span class=&quot;math&quot;&gt;\(n^6 \)&lt;/span&gt; entries for each possibility in the action-space.&lt;/p&gt;
+&lt;p&gt;Adaptive learning includes the belief states in the state dynamics. Even summarized as a distribution with two summary statistics, this involves a transition matrix of $n^6 $ entries for each possibility in the action-space.&lt;/p&gt;
 &lt;h3 id=&quot;model-uncertainty&quot;&gt;Model Uncertainty&lt;/h3&gt;
 &lt;p&gt;Parameters of the models are fixed, and becomes parameter uncertainty, Updating rule is &lt;span class=&quot;math&quot;&gt;\[ x_{t+1} = p_t f_1(x_t) + (1-p_t) f_2(x_t) \]&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\[ p_{t+1} = \frac{p_t f_1(x_t)}{ p_t f_1(x_t) + (1-p_t) f_2(x_t) }\]&lt;/span&gt;&lt;/p&gt;
 &lt;h3 id=&quot;state-uncertainty&quot;&gt;State uncertainty&lt;/h3&gt;
@@ -6160,8 +6160,8 @@ out &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[y_n = \ln \left(\frac{R_t}{S_{t-1}}\right) \]&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\[ x_n = \left[ 1 \choose -S_{t-1} \right] \]&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\[ a_n = \left[ \alpha_t \choose \beta_t \right] \]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Their annual review, (Walters &amp;amp; Hilborn, 1978), is a nice broad perspective without details for implementation. Surprised that ch 8 of Walters 86 textbook doesn’t get beyond the basics of Bellman’s value iteration. Mangel’s 1985 &lt;a href=&quot;http://www.amazon.com/Decision-uncertain-resource-Mathematics-Engineering/dp/0124687202/ref=ntt_at_ep_dpt_3&quot;&gt;edited volume&lt;/a&gt; seems to do a nice job (but the Google copy doesn’t quite cut it).&lt;/p&gt;
 &lt;h2 id=&quot;two-armed-bandit-problem&quot;&gt;Two-armed bandit problem&lt;/h2&gt;
-&lt;p&gt;Imagine machine 1 has payoff $ &lt;em&gt;1 $ with unknown probability $ p&lt;/em&gt;1 &lt;span class=&quot;math&quot;&gt;\(, machine 2 has payoff \)&lt;/span&gt; &lt;em&gt;2 $ with known probability $ p&lt;/em&gt;2 $.&lt;/p&gt;
-&lt;p&gt;Pr( &lt;span class=&quot;math&quot;&gt;\(k \)&lt;/span&gt; wins in &lt;span class=&quot;math&quot;&gt;\(m \)&lt;/span&gt; gambles $ | p_1 $ ) is &lt;code&gt;dbinom(k, m, p_1)&lt;/code&gt; and we need a good prior density &lt;span class=&quot;math&quot;&gt;\(f(p_1) \)&lt;/span&gt; as &lt;code&gt;dbeta(x, alpha, beta)&lt;/code&gt; such that the posterior is also a beta density.&lt;/p&gt;
+&lt;p&gt;Imagine machine 1 has payoff $ _1 $ with unknown probability $ p_1 $, machine 2 has payoff $ _2 $ with known probability $ p_2 $.&lt;/p&gt;
+&lt;p&gt;Pr( $k $ wins in $m $ gambles $ | p_1 $ ) is &lt;code&gt;dbinom(k, m, p_1)&lt;/code&gt; and we need a good prior density $f(p_1) $ as &lt;code&gt;dbeta(x, alpha, beta)&lt;/code&gt; such that the posterior is also a beta density.&lt;/p&gt;
 &lt;p&gt;The value-to-go in the SDP solution is a function of the distribution parameters of the prior,&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[J_n(\alpha,\beta) = \max\left( \alpha_2 p_2 , \alpha_1 \frac{\alpha}{\alpha + \beta}\right) \]&lt;/span&gt;,&lt;/p&gt;
 &lt;p&gt;which just the integral over the posterior at that time, since no further information will be gained. We can compute the earlier steps from this.&lt;/p&gt;
@@ -6420,7 +6420,7 @@ f2 &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;dt[,&lt;span class=&q
 &lt;li&gt;&lt;p&gt;Updated pmc to &lt;a href=&quot;https://github.com/cboettig/pmc/commit/f86ca7bfc74af7690c18e1f25184051295edfdf9&quot;&gt;handle errors&lt;/a&gt; (mostly from svd failures in geiger). Also updated vignette.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Failing to declare the XML namespace was causing my simple xml parsing example to fail.&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 thing =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;xmlParse&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;getURL&lt;/span&gt;(&amp;amp;quot;https:&lt;span class=&quot;er&quot;&gt;//&lt;/span&gt;github.com/cboettig/pmc/commits/master.atom&amp;amp;quot;))
 nds =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;getNodeSet&lt;/span&gt;(thing, &lt;span class=&quot;st&quot;&gt;&amp;#39;//x:entry&amp;#39;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;namespaces =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;#39;http://www.w3.org/2005/Atom&amp;#39;&lt;/span&gt;))
 &lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(nds)&lt;/code&gt;&lt;/pre&gt;
@@ -6700,7 +6700,7 @@ render_wordpress &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;functio
 &lt;p&gt;It would be nicer to have built this around flickR, and provide the urls so that the image can be used without the wordpress flickr shortcode. But for now, the real point is that it’s intuitive to extend knitr to this very customized format, specific to my platform, my plugins, and my shortcodes, with minimal effort. All thanks to Yuhui’s very nice implementation of knitr.&lt;/p&gt;
 &lt;h3 id=&quot;addendum&quot;&gt;Addendum&lt;/h3&gt;
 &lt;p&gt;If we’d rather upload the images to wordpress itself (seems sensible), this is also straight forward thanks to Duncan’s RWordPress package on &lt;a href=&quot;http://www.omegahat.org/&quot;&gt;Omegahat&lt;/a&gt;. Writing the hooks would look like this:&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 .wordpress.url =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;function(x) {
   &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(RWordPress)
   file =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;paste&lt;/span&gt;(x, &lt;span class=&quot;dt&quot;&gt;collapse =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;)
@@ -6709,7 +6709,7 @@ render_wordpress &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;functio
       } else file
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Note that RWordPress will look for the login credentials defined in “options”, i.e. put something like this in your .Rprofile.&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;options&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;WordPressLogin =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;userid =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt;),
     &lt;span class=&quot;dt&quot;&gt;WordPressURL =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;http://www.yourdomain.com/xmlrpc.php&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We then just define a hook based on the hook_plot_html that uses the Wordpress URL.&lt;/p&gt;
@@ -6733,7 +6733,7 @@ opts_knit$&lt;span class=&quot;kw&quot;&gt;set&lt;/span&gt;(&lt;span class=&quot
   })&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We could likewise specify the flickr function there, etc. Note that I don’t need to worry about the “paste” or “else” conditions either, that’s all handled automatically now. Just specify an upload function and we’re good to go.&lt;/p&gt;
 &lt;p&gt;Minor you (I) might think the one-line namespace call could be used instead of loading the library:&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 RWordPress::&lt;span class=&quot;kw&quot;&gt;uploadFile&lt;/span&gt;(file)$url&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;but it appears you’d be wrong.&lt;/p&gt;
 </content>
@@ -6858,7 +6858,7 @@ let vimrplugin_underscore = 0&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We begin with two examples that illustrate these challenges.  The first highlights the danger of handling only the risks we know how to handle.  The second illustrates the difficulty of implementing resilience-based concepts in the place of risk-based management.  We then present our mathematical framework for bridging these approaches on these systems &amp;amp; discuss the successes and obstacles to this united approach.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;The literature has done a better job enunciating this question than tackling it. ((Knight’s 1921 text on &lt;a href=&quot;http://www.econlib.org/library/Knight/knRUP.html&quot;&gt;Risk, Uncertainty &amp;amp; Profit&lt;/a&gt; would be a more erudite citation than Rumsfeld’s memorable phrase.)) The TREE review, (Polasky &lt;em&gt;et. al.&lt;/em&gt; 2011), provides a nice introduction to the problem, identifying decision-theoretic and thresholds/resilience approaches, though gets little farther than the opinion piece suggesting the need for this work (Fischer &lt;em&gt;et. al.&lt;/em&gt; 2009) two years prior.&lt;/p&gt;
-&lt;p&gt;A nice if intuitive result (Peterson et al 2003) ((﻿Peterson, G., &amp;amp; Carpenter, S. (2003). Uncertainty and the management of multi-state ecosystems: an apparently rational route to collapse. Ecology, 84(6), 1403-1411. &lt;a href=&quot;http://www.jstor.org/stable/3107958&quot;&gt;http://www.jstor.org/stable/3107958&lt;/a&gt;)) shows optimization that misses the alternate stable state description performing rather poorly, similar to my examples. A more illuminating result is (Brozović &amp;amp; Schlenker, 2011), which provides an explicit example where the outcome of optimization in a system with alternate stable states depends entirely on small differences in noise regime. A more general understanding of when stochastic optimization will give results that are sensitive to assumptions of the noise would be useful. Any takers for integrating over the uncertainty in the uncertainty?&lt;/p&gt;
+&lt;p&gt;A nice if intuitive result (Peterson et al 2003) ((﻿Peterson, G., &amp;amp; Carpenter, S. (2003). Uncertainty and the management of multi-state ecosystems: an apparently rational route to collapse. Ecology, 84(6), 1403-1411. &lt;a href=&quot;http://www.jstor.org/stable/3107958&quot; class=&quot;uri&quot;&gt;http://www.jstor.org/stable/3107958&lt;/a&gt;)) shows optimization that misses the alternate stable state description performing rather poorly, similar to my examples. A more illuminating result is (Brozović &amp;amp; Schlenker, 2011), which provides an explicit example where the outcome of optimization in a system with alternate stable states depends entirely on small differences in noise regime. A more general understanding of when stochastic optimization will give results that are sensitive to assumptions of the noise would be useful. Any takers for integrating over the uncertainty in the uncertainty?&lt;/p&gt;
 &lt;p&gt;A more immediate problem is the computational limitations of decision-theoretic approaches in handling full system complexity. The curse of dimensionality is exacerbated by the need for higher dimensions to model parameter uncertainty as well as dynamic state variables, where adaptive management can learn actively or passively to update this uncertainty.&lt;/p&gt;
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
 &lt;ul&gt;
@@ -6911,7 +6911,7 @@ let vimrplugin_underscore = 0&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I did notice they introduce predator density as a parameter, &lt;em&gt;μ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;T&lt;/em&gt;&lt;/sub&gt;, rather than as a function of forage fish density (N). They &lt;em&gt;assume&lt;/em&gt; top-down effects aren’t density dependent (by assuming predator pop doesn’t grow when prey grows, though they could have added N in elsewhere in the T equation instead, they don’t). Since they’ve assumed top-down mechanisms are density independent, they can’t get an equilibrium size determined by top-down effects alone, equation (4) i.e. the pattern of control they report “finding” appears to me to be the pattern they “assumed” when they chose to make T independent of N. (Maybe I’m missing something but I feel I keep running into this kind of recursive argument).&lt;/p&gt;
 &lt;p&gt;Greatly enjoyed reading &lt;a href=&quot;http://dx.doi.org/10.1579/0044-7447%282007%2936%5B304%3AIAMHTS%5D2.0.CO%3B2&quot;&gt;Walters 2007&lt;/a&gt;. The example of predictive disagreement between the two equally good-fitting shrimp-harvest models is a fantastic example, and quite evocative of what Steve Pacala talks about in the historic fits on the climate models.&lt;/p&gt;
 &lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-&lt;p&gt;Munch S, Snover M, Watters G and Mangel M (2005). “A Unified Treatment of Top-Down And Bottom-up Control of Reproduction in Populations.” &lt;em&gt;Ecology Letters&lt;/em&gt;, &lt;strong&gt;8&lt;/strong&gt;. &lt;a href=&quot;http://dx.doi.org/10.1111/j.1461-0248.2005.00766.x&quot;&gt;http://dx.doi.org/10.1111/j.1461-0248.2005.00766.x&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Munch S, Snover M, Watters G and Mangel M (2005). “A Unified Treatment of Top-Down And Bottom-up Control of Reproduction in Populations.” &lt;em&gt;Ecology Letters&lt;/em&gt;, &lt;strong&gt;8&lt;/strong&gt;. &lt;a href=&quot;http://dx.doi.org/10.1111/j.1461-0248.2005.00766.x&quot; class=&quot;uri&quot;&gt;http://dx.doi.org/10.1111/j.1461-0248.2005.00766.x&lt;/a&gt;.&lt;/p&gt;
 </content>
  </entry>
  
@@ -6990,21 +6990,21 @@ let vimrplugin_underscore = 0&lt;/code&gt;&lt;/pre&gt;
    <updated>2012-02-20T19:12:13+00:00</updated>
    <id>/02/20/finer-sampling-in-prosecutors-fallacy</id>
    <content type="html">&lt;p&gt;Create the data. We’ll save files as some of these code chunks need to be run on the cluster for large memory use.&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(populationdynamics)
 pars =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;Xo =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;500&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;e =&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;a =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;180&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;K =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;1000&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;h =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;200&lt;/span&gt;,
     &lt;span class=&quot;dt&quot;&gt;i =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;Da =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;Dt =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;p =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;)
 sn &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;saddle_node_ibm&lt;/span&gt;(pars, &lt;span class=&quot;dt&quot;&gt;times=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;seq&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;dv&quot;&gt;5000&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;length=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;50000&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;reps=&lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;)
 &lt;span class=&quot;kw&quot;&gt;save&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;sn&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;file=prosecutor.rda&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Subset the chance transitions&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 d &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;dim&lt;/span&gt;(sn$x1)
 crashed &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;which&lt;/span&gt;(sn$x1[d[&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;],]==&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;)
 dat &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;( sn$x1[,crashed] )
 &lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(dat) =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;reps&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;value&amp;quot;&lt;/span&gt;)
 &lt;span class=&quot;kw&quot;&gt;save&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;dat&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;file=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;crashed.rda&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Zoom into the region before the crash for purposes of the analysis&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(plyr)
 zoom &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;ddply&lt;/span&gt;(dat, &lt;span class=&quot;st&quot;&gt;&amp;quot;reps&amp;quot;&lt;/span&gt;, function(X){
     tip &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;min&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;which&lt;/span&gt;(X$value==&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;))
@@ -7012,14 +7012,14 @@ zoom &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quo
     &lt;span class=&quot;kw&quot;&gt;data.frame&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;time=&lt;/span&gt;X$time[index], &lt;span class=&quot;dt&quot;&gt;value=&lt;/span&gt;X$value[index])
     })&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Plot the first couple examples&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(ggplot2)
 &lt;span class=&quot;kw&quot;&gt;ggplot&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;subset&lt;/span&gt;(zoom, reps &amp;lt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;10&lt;/span&gt;)) +&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;geom_line&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;aes&lt;/span&gt;(time, value)) +&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;facet_wrap&lt;/span&gt;(~reps, &lt;span class=&quot;dt&quot;&gt;scales=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;free&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;figure&gt;
 &lt;img src=&quot;http://farm8.staticflickr.com/7038/6911538065_da2e1924e4_o.png&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;Test analysis on model fit:&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;load&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;zoom.rda&amp;quot;&lt;/span&gt;)
 L &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;unique&lt;/span&gt;(dat$reps))
 &lt;span class=&quot;kw&quot;&gt;library&lt;/span&gt;(snow)
@@ -7032,7 +7032,7 @@ models &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&q
 &lt;span class=&quot;kw&quot;&gt;stopCluster&lt;/span&gt;(cluster)
 &lt;span class=&quot;kw&quot;&gt;save&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;models&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;file=&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;&amp;quot;models.rda&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once this step is complete, we can create the distribution of different indicators&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
  &lt;span class=&quot;kw&quot;&gt;load&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;zoom.rda&amp;quot;&lt;/span&gt;)
  &lt;span class=&quot;kw&quot;&gt;load&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;models.rda&amp;quot;&lt;/span&gt;)
 &lt;span class=&quot;co&quot;&gt;# plot indicators&lt;/span&gt;
@@ -7086,34 +7086,34 @@ dat &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
    <updated>2012-02-16T19:34:55+00:00</updated>
    <id>/02/16/squiggles</id>
    <content type="html">&lt;p&gt;Variability in the appearance of a trend&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 nreps &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;64&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(populationdynamics)
 pars =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;Xo =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;730&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;e =&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;a =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;100&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;K =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;1000&lt;/span&gt;, 
     &lt;span class=&quot;dt&quot;&gt;h =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;200&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;i =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;Da =&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;0.09&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;Dt =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;p =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;)
 time =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;seq&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;990&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;length =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;100&lt;/span&gt;)
 sn &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;saddle_node_ibm&lt;/span&gt;(pars, time, &lt;span class=&quot;dt&quot;&gt;reps =&lt;/span&gt; nreps)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We reformat the replicates into long form,&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 X &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;data.frame&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;time =&lt;/span&gt; time, &lt;span class=&quot;dt&quot;&gt;value =&lt;/span&gt; sn$x1)
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(reshape)
 dat &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;(X, &lt;span class=&quot;dt&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;)
 &lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(dat)[&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;] &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;quot;reps&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(plyr)
 window &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;length&lt;/span&gt;(X[[&lt;span class=&quot;st&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;]])/&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;
 tmp &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;ddply&lt;/span&gt;(dat, &lt;span class=&quot;st&quot;&gt;&amp;quot;reps&amp;quot;&lt;/span&gt;, function(X) &lt;span class=&quot;kw&quot;&gt;window_autocorr&lt;/span&gt;(X$value, 
     &lt;span class=&quot;dt&quot;&gt;windowsize =&lt;/span&gt; window))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Tidy up the warning signal data&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 acorr &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;t&lt;/span&gt;(tmp))
 acorr &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;acorr[-&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;, ]
 &lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(acorr) &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;reps&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;value&amp;quot;&lt;/span&gt;)
 acorr$time &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;as.numeric&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;gsub&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;st&quot;&gt;D&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;, acorr$time))
 &lt;span class=&quot;kw&quot;&gt;class&lt;/span&gt;(acorr$value) &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;quot;numeric&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and plot the replicate warning signals&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(ggplot2)
 &lt;span class=&quot;kw&quot;&gt;ggplot&lt;/span&gt;(acorr) +&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;geom_line&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;aes&lt;/span&gt;(time, value)) +&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;
 &lt;span class=&quot;st&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;facet_wrap&lt;/span&gt;(~reps) +&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;opts&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;title =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;Autocorrelation on replicates from a system approaching a crash&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
@@ -7122,7 +7122,7 @@ acorr$time &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span clas
 &lt;/figure&gt;
 &lt;h2 id=&quot;stable-system&quot;&gt;Stable system&lt;/h2&gt;
 &lt;p&gt;Stable model simulations&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 pars =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;Xo =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;730&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;e =&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;a =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;150&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;K =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;1000&lt;/span&gt;, 
     &lt;span class=&quot;dt&quot;&gt;h =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;200&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;i =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;Da =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;Dt =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;p =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;)
 time =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;seq&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;990&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;length =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;100&lt;/span&gt;)
@@ -7130,7 +7130,7 @@ sn &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;
 X &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;data.frame&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;time =&lt;/span&gt; time, &lt;span class=&quot;dt&quot;&gt;value =&lt;/span&gt; sn$x1)
 stable_dat &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;(X, &lt;span class=&quot;dt&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;)
 &lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(stable_dat)[&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;] &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;quot;reps&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 tmp &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;ddply&lt;/span&gt;(stable_dat, &lt;span class=&quot;st&quot;&gt;&amp;quot;reps&amp;quot;&lt;/span&gt;, function(X) &lt;span class=&quot;kw&quot;&gt;window_autocorr&lt;/span&gt;(X$value, 
     &lt;span class=&quot;dt&quot;&gt;windowsize =&lt;/span&gt; window))
 acorr &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;t&lt;/span&gt;(tmp))
@@ -7145,7 +7145,7 @@ acorr$time &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span clas
 &lt;/figure&gt;
 &lt;h2 id=&quot;variance-pattern&quot;&gt;Variance pattern&lt;/h2&gt;
 &lt;h3 id=&quot;replicates-approaching-a-crash&quot;&gt;Replicates approaching a crash&lt;/h3&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 tmp &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;ddply&lt;/span&gt;(dat, &lt;span class=&quot;st&quot;&gt;&amp;quot;reps&amp;quot;&lt;/span&gt;, function(X) &lt;span class=&quot;kw&quot;&gt;window_var&lt;/span&gt;(X$value, 
     &lt;span class=&quot;dt&quot;&gt;windowsize =&lt;/span&gt; window))
 acorr &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;t&lt;/span&gt;(tmp))
@@ -7159,7 +7159,7 @@ acorr$time &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span clas
 &lt;img src=&quot;https://github.com/cboettig/earlywarning/wiki/crashvar.png&quot; alt=&quot;plot of chunk crashvar&quot; /&gt;&lt;figcaption&gt;plot of chunk crashvar&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;h3 id=&quot;replicates-from-a-stable-system&quot;&gt;Replicates from a stable system&lt;/h3&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 tmp &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;ddply&lt;/span&gt;(stable_dat, &lt;span class=&quot;st&quot;&gt;&amp;quot;reps&amp;quot;&lt;/span&gt;, function(X) &lt;span class=&quot;kw&quot;&gt;window_var&lt;/span&gt;(X$value, 
     &lt;span class=&quot;dt&quot;&gt;windowsize =&lt;/span&gt; window))
 acorr &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;t&lt;/span&gt;(tmp))
@@ -7182,68 +7182,68 @@ acorr$time &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span clas
    <id>/02/15/getting-signal-from-autocorrelation</id>
    <content type="html">&lt;p&gt;This example goes through the steps to demonstrate that in a sufficiently-frequently sampled timeseries, autocorrelation does contain &lt;strong&gt;some&lt;/strong&gt; signal of early warning. ((Post markdown generated automatically from knitr.))&lt;/p&gt;
 &lt;p&gt;Run the individual based simulation&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(populationdynamics)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;[code] Loading required package: populationdynamics&lt;/p&gt;
 &lt;p&gt;```&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 pars =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;Xo =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;730&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;e =&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;a =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;100&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;K =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;1000&lt;/span&gt;, 
     &lt;span class=&quot;dt&quot;&gt;h =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;200&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;i =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;Da =&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;0.09&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;Dt =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;p =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;)
 time =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;seq&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;500&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;length =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;500&lt;/span&gt;)
 sn &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;saddle_node_ibm&lt;/span&gt;(pars, time)
 X &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;data.frame&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;time =&lt;/span&gt; time, &lt;span class=&quot;dt&quot;&gt;value =&lt;/span&gt; sn$x1)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;compute the observed value:&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(earlywarning)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;[code] Loading required package: earlywarning&lt;/p&gt;
 &lt;p&gt;```&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 observed &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;warningtrend&lt;/span&gt;(X, window_autocorr)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;fit the models&lt;/p&gt;
 &lt;p&gt;$ dX = (- X) dt + dB_t $&lt;/p&gt;
-&lt;p&gt;$ dX = &lt;em&gt;t (- X) dt + (&lt;/em&gt;t+) dB_t $&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;p&gt;$ dX = _t (- X) dt + (_t+) dB_t $&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 A &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;stability_model&lt;/span&gt;(X, &lt;span class=&quot;st&quot;&gt;&amp;quot;OU&amp;quot;&lt;/span&gt;)
 B &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;stability_model&lt;/span&gt;(X, &lt;span class=&quot;st&quot;&gt;&amp;quot;LSN&amp;quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;simulate some replicates&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 reps &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;dv&quot;&gt;100&lt;/span&gt;
 Asim &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;simulate&lt;/span&gt;(A, reps)
 Bsim &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;simulate&lt;/span&gt;(B, reps)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;tidy up the data a bit&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(reshape2)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 Asim &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;(Asim, &lt;span class=&quot;dt&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;)
 Bsim &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;(Bsim, &lt;span class=&quot;dt&quot;&gt;id =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;time&amp;quot;&lt;/span&gt;)
 &lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(Asim)[&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;] &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;quot;rep&amp;quot;&lt;/span&gt;
 &lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(Bsim)[&lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;] &amp;lt;-&lt;span class=&quot;st&quot;&gt; &amp;quot;rep&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Apply the &lt;code&gt;warningtrend&lt;/code&gt; &lt;code&gt;window_autocorr&lt;/code&gt; to each replicate&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(plyr)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 wsA &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;ddply&lt;/span&gt;(Asim, &lt;span class=&quot;st&quot;&gt;&amp;quot;rep&amp;quot;&lt;/span&gt;, warningtrend, window_autocorr)
 wsB &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;ddply&lt;/span&gt;(Bsim, &lt;span class=&quot;st&quot;&gt;&amp;quot;rep&amp;quot;&lt;/span&gt;, warningtrend, window_autocorr)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And gather and plot the results&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 tidy &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;melt&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;data.frame&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;null =&lt;/span&gt; wsA$tau, &lt;span class=&quot;dt&quot;&gt;test =&lt;/span&gt; wsB$tau))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;names&lt;/span&gt;(tidy) &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;simulation&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;value&amp;quot;&lt;/span&gt;)
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(beanplot)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;beanplot&lt;/span&gt;(value ~&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;simulation, tidy, &lt;span class=&quot;dt&quot;&gt;what =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, 
     &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;))
 &lt;span class=&quot;kw&quot;&gt;abline&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;h =&lt;/span&gt; observed, &lt;span class=&quot;dt&quot;&gt;lty =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;figure&gt;
 &lt;img src=&quot;https://github.com/cboettig/earlywarning/wiki/plot.png&quot; alt=&quot;plot of chunk plot&quot; /&gt;&lt;figcaption&gt;plot of chunk plot&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(ggplot2)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 roc &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;roc_data&lt;/span&gt;(tidy)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;[code] Area Under Curve = 0.819680311103255 True positive rate = 0.33 at false positive rate of 0.05&lt;/p&gt;
 &lt;p&gt;```&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;ggplot&lt;/span&gt;(roc) +&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;geom_line&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;aes&lt;/span&gt;(False.positives, True.positives), 
     &lt;span class=&quot;dt&quot;&gt;lwd =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;figure&gt;
@@ -7251,9 +7251,9 @@ roc &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;/figure&gt;
 &lt;h2 id=&quot;parallelization&quot;&gt;Parallelization&lt;/h2&gt;
 &lt;p&gt;Parallel code for the &lt;code&gt;plyr&lt;/code&gt; command is straight-forward for multicore use,&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(doMC)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;registerDoMC&lt;/span&gt;()
 wsA &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;ddply&lt;/span&gt;(Asim, &lt;span class=&quot;st&quot;&gt;&amp;quot;rep&amp;quot;&lt;/span&gt;, warningtrend, window_autocorr, 
     &lt;span class=&quot;dt&quot;&gt;.parallel =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)
@@ -7261,7 +7261,7 @@ wsB &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
     &lt;span class=&quot;dt&quot;&gt;.parallel =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Which works nicely (other than the progress indicator finishing early).&lt;/p&gt;
 &lt;p&gt;In principle, this can be &lt;a href=&quot;http://stackoverflow.com/questions/5559287/how-do-i-make-dosmp-play-nicely-with-plyr&quot;&gt;parallelized over MPI&lt;/a&gt; using &lt;a href=&quot;http://www.numbertheory.nl/2011/11/14/parallelization-using-plyr-loading-objects-and-packages-into-worker-nodes/&quot;&gt;an additional function&lt;/a&gt;, seems to work:&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;library&lt;/span&gt;(snow)
 &lt;span class=&quot;kw&quot;&gt;library&lt;/span&gt;(doSNOW)
 &lt;span class=&quot;kw&quot;&gt;source&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;../createCluster.R&amp;quot;&lt;/span&gt;)
@@ -7283,10 +7283,10 @@ ws &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;
    <content type="html">&lt;p&gt;Going through additional examples of things I’d like to see / demonstrate but do not fit into the narrative of the manuscript. Writing these in knitr/dynamic documentation to confirm code produces the examples listed, and give a bit tighter integration between text and code examples.&lt;/p&gt;
 &lt;h3 id=&quot;show-the-parameter-distributions&quot;&gt;Show the parameter distributions:&lt;/h3&gt;
 &lt;p&gt;We can also look at the bootstraps of the parameters. Another helper function will reformat this data from reps list. The fit column uses a two-letter code to indicate first what model was used to simulate the data, and then what model was fit to the data. For instance, AB means the data was simulated from model A (the null, OU model) but fit to B.&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 pars &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;parameter_bootstraps&lt;/span&gt;(reps)
 &lt;span class=&quot;kw&quot;&gt;head&lt;/span&gt;(pars)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
     value parameter fit rep
  &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;   &lt;span class=&quot;fl&quot;&gt;1.380&lt;/span&gt;        Ro  AA   &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;
  &lt;span class=&quot;dv&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;583.109&lt;/span&gt;     theta  AA   &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;
@@ -7295,7 +7295,7 @@ pars &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quo
  &lt;span class=&quot;dv&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;602.484&lt;/span&gt;     theta  AB   &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;
  &lt;span class=&quot;dv&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;fl&quot;&gt;130.060&lt;/span&gt;     sigma  AB   &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;There are lots of options for visualizing this relatively high-dimensional data, which we can easily explore with a few commands from the &lt;code&gt;ggplot2&lt;/code&gt; package. For instance, we can look at average and range of parameters estimated in the bootstraps of each model:&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 &lt;span class=&quot;kw&quot;&gt;require&lt;/span&gt;(Hmisc)
 &lt;span class=&quot;kw&quot;&gt;ggplot&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;subset&lt;/span&gt;(pars, fit %in%&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;AA&amp;quot;&lt;/span&gt;, &lt;span class=&quot;st&quot;&gt;&amp;quot;BB&amp;quot;&lt;/span&gt;)), &lt;span class=&quot;kw&quot;&gt;aes&lt;/span&gt;(fit, 
     value)) +&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;stat_summary&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;fun.y =&lt;/span&gt; mean, &lt;span class=&quot;dt&quot;&gt;geom =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;position =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;dodge&amp;quot;&lt;/span&gt;) +&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;
@@ -7694,7 +7694,7 @@ user  system elapsed
 &lt;h2 id=&quot;licensing-in-r&quot;&gt;Licensing in R&lt;/h2&gt;
 &lt;p&gt;R uses a simple but powerful license format in the DESCRIPTION files of all packages, which contain the essential meta-data for the package. Common FOSS licenses are recognized automatically (including version numbers or version inequalities). Since CC0 doesn’t (yet) make this list, we can use a custom license file where we provide the full plaintext CC0 license in the file LICENSE and write “file LICENSE” in the DESCRIPTION (&lt;a href=&quot;https://github.com/cboettig/fluctuationDomains&quot;&gt;my example&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;We can also see the frequency with which various licenses are used on the R repository, CRAN, with a few lines of code:&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 p =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;available.packages&lt;/span&gt;(contrib.
 &lt;span class=&quot;kw&quot;&gt;url&lt;/span&gt;(&lt;span class=&quot;st&quot;&gt;&amp;quot;http://cran.r-project.org&amp;quot;&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;type =&lt;/span&gt; &lt;span class=&quot;st&quot;&gt;&amp;quot;source&amp;quot;&lt;/span&gt;)
 &lt;span class=&quot;kw&quot;&gt;sort&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;table&lt;/span&gt;(p[, &lt;span class=&quot;st&quot;&gt;&amp;quot;License&amp;quot;&lt;/span&gt;]))&lt;/code&gt;&lt;/pre&gt;
@@ -7719,8 +7719,8 @@ p =&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&
 &lt;p&gt;Nick posed this question to me about dealing with exponents of large numbers numerically. Apparently he needs to calculate&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ \log( e^{a_1 + K} + e^{a_2 + K} + ... ) \]&lt;/span&gt; for some very large values of $ K $ and $ a$. R cannot compute this for exponents greater than 307 using the default double precision. First, the K is no problem, just factor it out:&lt;/p&gt;
 &lt;p&gt;&lt;span class=&quot;math&quot;&gt;\[ \log( \exp(a_1)\exp(K) + \exp(a_2) \exp(K) + ... ) \]&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\[ \log( \exp(K) * ( \exp(a_1) + \exp(a_2) + ... )) \]&lt;/span&gt; &lt;span class=&quot;math&quot;&gt;\[ K + \log( (exp(a_1) + exp(a_2) + ... )) \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Now just &lt;span class=&quot;math&quot;&gt;\(a_1, a_2, a_3 \)&lt;/span&gt; etc are the problem. Let’s say the &lt;span class=&quot;math&quot;&gt;\(a_i\)&lt;/span&gt; are in the vector &lt;span class=&quot;math&quot;&gt;\(a\)&lt;/span&gt;. Then we just rescale by choosing some &lt;span class=&quot;math&quot;&gt;\(c\)&lt;/span&gt; such that we can take the exponents of something smaller:&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;p&gt;Now just $a_1, a_2, a_3 $ etc are the problem. Let’s say the &lt;span class=&quot;math&quot;&gt;\(a_i\)&lt;/span&gt; are in the vector &lt;span class=&quot;math&quot;&gt;\(a\)&lt;/span&gt;. Then we just rescale by choosing some &lt;span class=&quot;math&quot;&gt;\(c\)&lt;/span&gt; such that we can take the exponents of something smaller:&lt;/p&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 if ( &lt;span class=&quot;kw&quot;&gt;max&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;abs&lt;/span&gt;(a)) &amp;gt;&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;max&lt;/span&gt;(a) )
   c &amp;lt;-&lt;span class=&quot;st&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;min&lt;/span&gt;(a)
 else
@@ -7834,7 +7834,7 @@ ul&lt;span class=&quot;fl&quot;&gt;.tweets&lt;/span&gt; &lt;span class=&quot;kw&
    <updated>2012-01-19T14:10:49+00:00</updated>
    <id>/01/19/is-your-phylogeny-informative</id>
    <content type="html">&lt;p&gt;Yesterday my paper (Boettiger &lt;em&gt;et. al.&lt;/em&gt; 2012)  appeared in early view in Evolution (&lt;a href=&quot;http://www.mendeley.com/download/public/98752/4485545655/9a209c7dd29980fd2e47c06eb8b2d1d7dd6f70d4/dl.pdf&quot;&gt;author’s preprint&lt;/a&gt;),As the open access copy doesn’t appear on pubmed for a while, you can access my author’s copy &lt;a href=&quot;http://www.mendeley.com/download/public/98752/4485545655/9a209c7dd29980fd2e47c06eb8b2d1d7dd6f70d4/dl.pdf&quot;&gt;here&lt;/a&gt;. so I’d like to take this chance to share the back-story and highlight my own view on some of our findings, and the associated &lt;a href=&quot;http://cran.r-project.org/web/packages/pmc/index.html&quot;&gt;package on CRAN&lt;/a&gt;.Just submitted, meanwhile, the code is always on &lt;a href=&quot;https://github.com/cboettig/pmc&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I didn’t set out to write this paper.  I set out to write a very different paper, introducing a new phylogenetic method for continuous traits that estimates changes in evolutionary constraint.  This adds &lt;em&gt;even more &lt;/em&gt;parameters than already present in rich models multi-peak OU process, and I wanted to know if it could be justified – if there really was enough information to play the game we already had, before I went and made the situation even worse. Trying to find something rigorous enough to hang my hat on, I ended up writing this paper.&lt;/p&gt;
+&lt;p&gt;I didn’t set out to write this paper.  I set out to write a very different paper, introducing a new phylogenetic method for continuous traits that estimates changes in evolutionary constraint.  This adds _even more _parameters than already present in rich models multi-peak OU process, and I wanted to know if it could be justified – if there really was enough information to play the game we already had, before I went and made the situation even worse. Trying to find something rigorous enough to hang my hat on, I ended up writing this paper.&lt;/p&gt;
 &lt;h3 id=&quot;the-short-of-it&quot;&gt;The short of it&lt;/h3&gt;
 &lt;p&gt;There’s essentially three conclusions I draw from the paper.&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
@@ -7863,7 +7863,7 @@ ul&lt;span class=&quot;fl&quot;&gt;.tweets&lt;/span&gt; &lt;span class=&quot;kw&
 &lt;/figure&gt;
 &lt;p&gt;You could just bootstrap the likelihoods or for nested models, look at the parameter distributions, but you get the maximum &lt;em&gt;statistical power&lt;/em&gt; from the ratio (says Neyman-Pearson Lemma).&lt;/p&gt;
 &lt;h3 id=&quot;a-technical-note-mix-and-match-formats&quot;&gt;A technical note: mix and match formats&lt;/h3&gt;
-&lt;p&gt;Many users don’t like going between ouch format and ape/phylo formats. The pmc package doesn’t care what you use, feel free to mix and match. In case the conversion tools are useful, I’ve provided functions to move your data and trees back and forth between those formats too.  See &lt;em&gt;format&lt;/em&gt;data()_ to data-frames and &lt;em&gt;convert()&lt;/em&gt; to toggle between tree formats.&lt;/p&gt;
+&lt;p&gt;Many users don’t like going between ouch format and ape/phylo formats. The pmc package doesn’t care what you use, feel free to mix and match. In case the conversion tools are useful, I’ve provided functions to move your data and trees back and forth between those formats too.  See &lt;em&gt;format_data()&lt;/em&gt; to data-frames and &lt;em&gt;convert()&lt;/em&gt; to toggle between tree formats.&lt;/p&gt;
 &lt;h2 id=&quot;reproducible-research&quot;&gt;Reproducible Research&lt;/h2&gt;
 &lt;p&gt;The package is designed to make things easier.  It comes with a vignette (written in sweave) showing just what commands to run to replicate the results from the manuscript.&lt;/p&gt;
 &lt;p&gt;This entire project has been documented in my open lab notebook from its &lt;a href=&quot;http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010/02/07&quot;&gt;inception&lt;/a&gt;. Posts prior to October 2010 can be found on my &lt;a href=&quot;http://openwetware.org/wiki/User:Carl_Boettiger/Notebook/Comparative_Phylogenetics/2010&quot;&gt;OWW notebook&lt;/a&gt;, the rest in my current &lt;a href=&quot;http://www.carlboettiger.info/archives/category/phylogenetics&quot;&gt;phylogenetics notebook&lt;/a&gt; (here on wordpress). Of course this project is interwoven with many notes on related and more recent work.&lt;/p&gt;
@@ -8014,7 +8014,7 @@ ul&lt;span class=&quot;fl&quot;&gt;.tweets&lt;/span&gt; &lt;span class=&quot;kw&
 &lt;li&gt;&lt;p&gt;Many packages use print() to communicate with the user for progress, warnings, etc.  These should use message() and warning() so these can be suppressed when appropriate.  Working around this is hard, instead of suppressMessages, one can wrap the call as (ht Simon, &lt;a href=&quot;http://stackoverflow.com/questions/8797314/suppress-messages-displayed-by-print-instead-of-message-or-warning-in-r/8797387&quot;&gt;stackoverflow&lt;/a&gt;):&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;.&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt; &lt;span class=&quot;kw&quot;&gt;invisible&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;capture.output&lt;/span&gt;(
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt; &lt;span class=&quot;kw&quot;&gt;invisible&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;capture.output&lt;/span&gt;(
 
 out &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;some_noisy_function&lt;/span&gt;()
 
@@ -8026,7 +8026,7 @@ out &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;p&gt;Started runs on body-size data from Sam for different phylogenies.&lt;/p&gt;
 &lt;h2 id=&quot;treebase&quot;&gt;TreeBASE&lt;/h2&gt;
 &lt;p&gt;added TreePar example&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 
 yule_4rate &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;bd.shifts.optim&lt;/span&gt;(x, &lt;span class=&quot;dt&quot;&gt;sampling =&lt;/span&gt; &lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;,
 &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;dv&quot;&gt;1&lt;/span&gt;), &lt;span class=&quot;dt&quot;&gt;grid =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;start =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;end =&lt;/span&gt; &lt;span class=&quot;dv&quot;&gt;60&lt;/span&gt;, &lt;span class=&quot;dt&quot;&gt;ME =&lt;/span&gt; &lt;span class=&quot;ot&quot;&gt;FALSE&lt;/span&gt;,
@@ -8098,7 +8098,7 @@ aic &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot
 &lt;li&gt;&lt;p&gt;Performance of alpha v theta?&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Edited plotting of likelihood comparisons, just grouped by trait to get common axis. (Difficult to get intelligent zooming on facet_grid to ignore the outliers). Trying such as:&lt;/p&gt;
-&lt;pre class=&quot;sourceCode R&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
+&lt;pre class=&quot;sourceCode r&quot;&gt;&lt;code class=&quot;sourceCode r&quot;&gt;
 lims &amp;lt;-&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;cast&lt;/span&gt;(dat, comparison ~&lt;span class=&quot;st&quot;&gt; &lt;/span&gt;trait, function(x) &lt;span class=&quot;kw&quot;&gt;quantile&lt;/span&gt;(x, &lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(.&lt;span class=&quot;dv&quot;&gt;05&lt;/span&gt;,.&lt;span class=&quot;dv&quot;&gt;95&lt;/span&gt;)))
 &lt;span class=&quot;kw&quot;&gt;coord_cartesian&lt;/span&gt;(&lt;span class=&quot;dt&quot;&gt;ylim=&lt;/span&gt;&lt;span class=&quot;kw&quot;&gt;c&lt;/span&gt;(&lt;span class=&quot;kw&quot;&gt;min&lt;/span&gt;(lims), &lt;span class=&quot;kw&quot;&gt;max&lt;/span&gt;(lims)), &lt;span class=&quot;dt&quot;&gt;wise=&lt;/span&gt;&lt;span class=&quot;ot&quot;&gt;TRUE&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;but I need different ylims for each row when facet_grid has scales=“free_y”.&lt;/p&gt;

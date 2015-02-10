@@ -107,34 +107,34 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <p>Variability in the appearance of a trend</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 nreps &lt;-<span class="st"> </span><span class="dv">64</span></code></pre>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">require</span>(populationdynamics)
 pars =<span class="st"> </span><span class="kw">c</span>(<span class="dt">Xo =</span> <span class="dv">730</span>, <span class="dt">e =</span> <span class="fl">0.5</span>, <span class="dt">a =</span> <span class="dv">100</span>, <span class="dt">K =</span> <span class="dv">1000</span>, 
     <span class="dt">h =</span> <span class="dv">200</span>, <span class="dt">i =</span> <span class="dv">0</span>, <span class="dt">Da =</span> <span class="fl">0.09</span>, <span class="dt">Dt =</span> <span class="dv">0</span>, <span class="dt">p =</span> <span class="dv">2</span>)
 time =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">990</span>, <span class="dt">length =</span> <span class="dv">100</span>)
 sn &lt;-<span class="st"> </span><span class="kw">saddle_node_ibm</span>(pars, time, <span class="dt">reps =</span> nreps)</code></pre>
 <p>We reformat the replicates into long form,</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 X &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">time =</span> time, <span class="dt">value =</span> sn$x1)
 <span class="kw">require</span>(reshape)
 dat &lt;-<span class="st"> </span><span class="kw">melt</span>(X, <span class="dt">id =</span> <span class="st">&quot;time&quot;</span>)
 <span class="kw">names</span>(dat)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;reps&quot;</span></code></pre>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">require</span>(plyr)
 window &lt;-<span class="st"> </span><span class="kw">length</span>(X[[<span class="st">&quot;time&quot;</span>]])/<span class="dv">2</span>
 tmp &lt;-<span class="st"> </span><span class="kw">ddply</span>(dat, <span class="st">&quot;reps&quot;</span>, function(X) <span class="kw">window_autocorr</span>(X$value, 
     <span class="dt">windowsize =</span> window))</code></pre>
 <p>Tidy up the warning signal data</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 acorr &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">t</span>(tmp))
 acorr &lt;-<span class="st"> </span>acorr[-<span class="dv">1</span>, ]
 <span class="kw">names</span>(acorr) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;time&quot;</span>, <span class="st">&quot;reps&quot;</span>, <span class="st">&quot;value&quot;</span>)
 acorr$time &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(<span class="kw">gsub</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">D&quot;</span>, <span class="st">&quot;&quot;</span>, acorr$time))
 <span class="kw">class</span>(acorr$value) &lt;-<span class="st"> &quot;numeric&quot;</span></code></pre>
 <p>and plot the replicate warning signals</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">require</span>(ggplot2)
 <span class="kw">ggplot</span>(acorr) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time, value)) +<span class="st"> </span>
 <span class="st">    </span><span class="kw">facet_wrap</span>(~reps) +<span class="st"> </span><span class="kw">opts</span>(<span class="dt">title =</span> <span class="st">&quot;Autocorrelation on replicates from a system approaching a crash&quot;</span>)</code></pre>
@@ -143,7 +143,7 @@ acorr$time &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(<spa
 </figure>
 <h2 id="stable-system">Stable system</h2>
 <p>Stable model simulations</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 pars =<span class="st"> </span><span class="kw">c</span>(<span class="dt">Xo =</span> <span class="dv">730</span>, <span class="dt">e =</span> <span class="fl">0.5</span>, <span class="dt">a =</span> <span class="dv">150</span>, <span class="dt">K =</span> <span class="dv">1000</span>, 
     <span class="dt">h =</span> <span class="dv">200</span>, <span class="dt">i =</span> <span class="dv">0</span>, <span class="dt">Da =</span> <span class="dv">0</span>, <span class="dt">Dt =</span> <span class="dv">0</span>, <span class="dt">p =</span> <span class="dv">2</span>)
 time =<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">990</span>, <span class="dt">length =</span> <span class="dv">100</span>)
@@ -151,7 +151,7 @@ sn &lt;-<span class="st"> </span><span class="kw">saddle_node_ibm</span>(pars, t
 X &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">time =</span> time, <span class="dt">value =</span> sn$x1)
 stable_dat &lt;-<span class="st"> </span><span class="kw">melt</span>(X, <span class="dt">id =</span> <span class="st">&quot;time&quot;</span>)
 <span class="kw">names</span>(stable_dat)[<span class="dv">2</span>] &lt;-<span class="st"> &quot;reps&quot;</span></code></pre>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 tmp &lt;-<span class="st"> </span><span class="kw">ddply</span>(stable_dat, <span class="st">&quot;reps&quot;</span>, function(X) <span class="kw">window_autocorr</span>(X$value, 
     <span class="dt">windowsize =</span> window))
 acorr &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">t</span>(tmp))
@@ -166,7 +166,7 @@ acorr$time &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(<spa
 </figure>
 <h2 id="variance-pattern">Variance pattern</h2>
 <h3 id="replicates-approaching-a-crash">Replicates approaching a crash</h3>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 tmp &lt;-<span class="st"> </span><span class="kw">ddply</span>(dat, <span class="st">&quot;reps&quot;</span>, function(X) <span class="kw">window_var</span>(X$value, 
     <span class="dt">windowsize =</span> window))
 acorr &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">t</span>(tmp))
@@ -180,7 +180,7 @@ acorr$time &lt;-<span class="st"> </span><span class="kw">as.numeric</span>(<spa
 <img src="https://github.com/cboettig/earlywarning/wiki/crashvar.png" alt="plot of chunk crashvar" /><figcaption>plot of chunk crashvar</figcaption>
 </figure>
 <h3 id="replicates-from-a-stable-system">Replicates from a stable system</h3>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 tmp &lt;-<span class="st"> </span><span class="kw">ddply</span>(stable_dat, <span class="st">&quot;reps&quot;</span>, function(X) <span class="kw">window_var</span>(X$value, 
     <span class="dt">windowsize =</span> window))
 acorr &lt;-<span class="st"> </span><span class="kw">melt</span>(<span class="kw">t</span>(tmp))

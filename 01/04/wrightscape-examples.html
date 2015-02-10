@@ -113,7 +113,7 @@
 <li><p>Performance of alpha v theta?</p></li>
 </ul>
 <p>Edited plotting of likelihood comparisons, just grouped by trait to get common axis. (Difficult to get intelligent zooming on facet_grid to ignore the outliers). Trying such as:</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 lims &lt;-<span class="st"> </span><span class="kw">cast</span>(dat, comparison ~<span class="st"> </span>trait, function(x) <span class="kw">quantile</span>(x, <span class="kw">c</span>(.<span class="dv">05</span>,.<span class="dv">95</span>)))
 <span class="kw">coord_cartesian</span>(<span class="dt">ylim=</span><span class="kw">c</span>(<span class="kw">min</span>(lims), <span class="kw">max</span>(lims)), <span class="dt">wise=</span><span class="ot">TRUE</span>)</code></pre>
 <p>but I need different ylims for each row when facet_grid has scales=“free_y”.</p>

@@ -183,7 +183,7 @@ render_wordpress &lt;-<span class="st"> </span>function() {
 <p>It would be nicer to have built this around flickR, and provide the urls so that the image can be used without the wordpress flickr shortcode. But for now, the real point is that it’s intuitive to extend knitr to this very customized format, specific to my platform, my plugins, and my shortcodes, with minimal effort. All thanks to Yuhui’s very nice implementation of knitr.</p>
 <h3 id="addendum">Addendum</h3>
 <p>If we’d rather upload the images to wordpress itself (seems sensible), this is also straight forward thanks to Duncan’s RWordPress package on <a href="http://www.omegahat.org/">Omegahat</a>. Writing the hooks would look like this:</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 .wordpress.url =<span class="st"> </span>function(x) {
   <span class="kw">require</span>(RWordPress)
   file =<span class="st"> </span><span class="kw">paste</span>(x, <span class="dt">collapse =</span> <span class="st">&#39;.&#39;</span>)
@@ -192,7 +192,7 @@ render_wordpress &lt;-<span class="st"> </span>function() {
       } else file
 }</code></pre>
 <p>Note that RWordPress will look for the login credentials defined in “options”, i.e. put something like this in your .Rprofile.</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">options</span>(<span class="dt">WordPressLogin =</span> <span class="kw">c</span>(<span class="dt">userid =</span> <span class="st">&quot;password&quot;</span>),
     <span class="dt">WordPressURL =</span> <span class="st">&quot;http://www.yourdomain.com/xmlrpc.php&quot;</span>)</code></pre>
 <p>We then just define a hook based on the hook_plot_html that uses the Wordpress URL.</p>
@@ -216,7 +216,7 @@ opts_knit$<span class="kw">set</span>(<span class="dt">upload.fun =</span> funct
   })</code></pre>
 <p>We could likewise specify the flickr function there, etc. Note that I don’t need to worry about the “paste” or “else” conditions either, that’s all handled automatically now. Just specify an upload function and we’re good to go.</p>
 <p>Minor you (I) might think the one-line namespace call could be used instead of loading the library:</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 RWordPress::<span class="kw">uploadFile</span>(file)$url</code></pre>
 <p>but it appears you’d be wrong.</p>
 

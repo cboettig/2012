@@ -120,7 +120,7 @@
 <li><p>Many packages use print() to communicate with the user for progress, warnings, etc.  These should use message() and warning() so these can be suppressed when appropriate.  Working around this is hard, instead of suppressMessages, one can wrap the call as (ht Simon, <a href="http://stackoverflow.com/questions/8797314/suppress-messages-displayed-by-print-instead-of-message-or-warning-in-r/8797387">stackoverflow</a>):</p></li>
 </ul>
 <p>.</p>
-<pre class="sourceCode R"><code class="sourceCode r"> <span class="kw">invisible</span>(<span class="kw">capture.output</span>(
+<pre class="sourceCode r"><code class="sourceCode r"> <span class="kw">invisible</span>(<span class="kw">capture.output</span>(
 
 out &lt;-<span class="st"> </span><span class="kw">some_noisy_function</span>()
 
@@ -132,7 +132,7 @@ out &lt;-<span class="st"> </span><span class="kw">some_noisy_function</span>()
 <p>Started runs on body-size data from Sam for different phylogenies.</p>
 <h2 id="treebase">TreeBASE</h2>
 <p>added TreePar example</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 
 yule_4rate &lt;-<span class="st"> </span><span class="kw">bd.shifts.optim</span>(x, <span class="dt">sampling =</span> <span class="kw">c</span>(<span class="dv">1</span>,
 <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>), <span class="dt">grid =</span> <span class="dv">5</span>, <span class="dt">start =</span> <span class="dv">0</span>, <span class="dt">end =</span> <span class="dv">60</span>, <span class="dt">ME =</span> <span class="ot">FALSE</span>,

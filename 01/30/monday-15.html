@@ -119,8 +119,8 @@
 <p>Nick posed this question to me about dealing with exponents of large numbers numerically. Apparently he needs to calculate</p>
 <p><span class="math">\[ \log( e^{a_1 + K} + e^{a_2 + K} + ... ) \]</span> for some very large values of $ K $ and $ a$. R cannot compute this for exponents greater than 307 using the default double precision. First, the K is no problem, just factor it out:</p>
 <p><span class="math">\[ \log( \exp(a_1)\exp(K) + \exp(a_2) \exp(K) + ... ) \]</span> <span class="math">\[ \log( \exp(K) * ( \exp(a_1) + \exp(a_2) + ... )) \]</span> <span class="math">\[ K + \log( (exp(a_1) + exp(a_2) + ... )) \]</span></p>
-<p>Now just <span class="math">\(a_1, a_2, a_3 \)</span> etc are the problem. Let’s say the <span class="math">\(a_i\)</span> are in the vector <span class="math">\(a\)</span>. Then we just rescale by choosing some <span class="math">\(c\)</span> such that we can take the exponents of something smaller:</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<p>Now just $a_1, a_2, a_3 $ etc are the problem. Let’s say the <span class="math">\(a_i\)</span> are in the vector <span class="math">\(a\)</span>. Then we just rescale by choosing some <span class="math">\(c\)</span> such that we can take the exponents of something smaller:</p>
+<pre class="sourceCode r"><code class="sourceCode r">
 if ( <span class="kw">max</span>(<span class="kw">abs</span>(a)) &gt;<span class="st"> </span><span class="kw">max</span>(a) )
   c &lt;-<span class="st">  </span><span class="kw">min</span>(a)
 else

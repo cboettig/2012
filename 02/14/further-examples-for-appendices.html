@@ -109,10 +109,10 @@
     <p>Going through additional examples of things I’d like to see / demonstrate but do not fit into the narrative of the manuscript. Writing these in knitr/dynamic documentation to confirm code produces the examples listed, and give a bit tighter integration between text and code examples.</p>
 <h3 id="show-the-parameter-distributions">Show the parameter distributions:</h3>
 <p>We can also look at the bootstraps of the parameters. Another helper function will reformat this data from reps list. The fit column uses a two-letter code to indicate first what model was used to simulate the data, and then what model was fit to the data. For instance, AB means the data was simulated from model A (the null, OU model) but fit to B.</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 pars &lt;-<span class="st"> </span><span class="kw">parameter_bootstraps</span>(reps)
 <span class="kw">head</span>(pars)</code></pre>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
     value parameter fit rep
  <span class="dv">1</span>   <span class="fl">1.380</span>        Ro  AA   <span class="dv">1</span>
  <span class="dv">2</span> <span class="fl">583.109</span>     theta  AA   <span class="dv">1</span>
@@ -121,7 +121,7 @@ pars &lt;-<span class="st"> </span><span class="kw">parameter_bootstraps</span>(
  <span class="dv">5</span> <span class="fl">602.484</span>     theta  AB   <span class="dv">1</span>
  <span class="dv">6</span> <span class="fl">130.060</span>     sigma  AB   <span class="dv">1</span></code></pre>
 <p>There are lots of options for visualizing this relatively high-dimensional data, which we can easily explore with a few commands from the <code>ggplot2</code> package. For instance, we can look at average and range of parameters estimated in the bootstraps of each model:</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">require</span>(Hmisc)
 <span class="kw">ggplot</span>(<span class="kw">subset</span>(pars, fit %in%<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;AA&quot;</span>, <span class="st">&quot;BB&quot;</span>)), <span class="kw">aes</span>(fit, 
     value)) +<span class="st"> </span><span class="kw">stat_summary</span>(<span class="dt">fun.y =</span> mean, <span class="dt">geom =</span> <span class="st">&quot;bar&quot;</span>, <span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>) +<span class="st"> </span>

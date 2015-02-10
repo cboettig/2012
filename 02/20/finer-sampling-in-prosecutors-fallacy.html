@@ -107,21 +107,21 @@
   <div class="col-md-7 col-md-offset-1">
     <article>
     <p>Create the data. We’ll save files as some of these code chunks need to be run on the cluster for large memory use.</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">require</span>(populationdynamics)
 pars =<span class="st"> </span><span class="kw">c</span>(<span class="dt">Xo =</span> <span class="dv">500</span>, <span class="dt">e =</span> <span class="fl">0.5</span>, <span class="dt">a =</span> <span class="dv">180</span>, <span class="dt">K =</span> <span class="dv">1000</span>, <span class="dt">h =</span> <span class="dv">200</span>,
     <span class="dt">i =</span> <span class="dv">0</span>, <span class="dt">Da =</span> <span class="dv">0</span>, <span class="dt">Dt =</span> <span class="dv">0</span>, <span class="dt">p =</span> <span class="dv">2</span>)
 sn &lt;-<span class="st"> </span><span class="kw">saddle_node_ibm</span>(pars, <span class="dt">times=</span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">5000</span>, <span class="dt">length=</span><span class="dv">50000</span>), <span class="dt">reps=</span><span class="dv">1</span>)
 <span class="kw">save</span>(<span class="st">&quot;sn&quot;</span>, <span class="st">&quot;file=prosecutor.rda&quot;</span>)</code></pre>
 <p>Subset the chance transitions</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 d &lt;-<span class="st"> </span><span class="kw">dim</span>(sn$x1)
 crashed &lt;-<span class="st"> </span><span class="kw">which</span>(sn$x1[d[<span class="dv">1</span>],]==<span class="dv">0</span>)
 dat &lt;-<span class="st"> </span><span class="kw">melt</span>( sn$x1[,crashed] )
 <span class="kw">names</span>(dat) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;time&quot;</span>, <span class="st">&quot;reps&quot;</span>, <span class="st">&quot;value&quot;</span>)
 <span class="kw">save</span>(<span class="st">&quot;dat&quot;</span>, <span class="dt">file=</span><span class="st">&quot;crashed.rda&quot;</span>)</code></pre>
 <p>Zoom into the region before the crash for purposes of the analysis</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">require</span>(plyr)
 zoom &lt;-<span class="st"> </span><span class="kw">ddply</span>(dat, <span class="st">&quot;reps&quot;</span>, function(X){
     tip &lt;-<span class="st"> </span><span class="kw">min</span>(<span class="kw">which</span>(X$value==<span class="dv">0</span>))
@@ -129,14 +129,14 @@ zoom &lt;-<span class="st"> </span><span class="kw">ddply</span>(dat, <span clas
     <span class="kw">data.frame</span>(<span class="dt">time=</span>X$time[index], <span class="dt">value=</span>X$value[index])
     })</code></pre>
 <p>Plot the first couple examples</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">require</span>(ggplot2)
 <span class="kw">ggplot</span>(<span class="kw">subset</span>(zoom, reps &lt;<span class="st"> </span><span class="dv">10</span>)) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time, value)) +<span class="st"> </span><span class="kw">facet_wrap</span>(~reps, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
 <figure>
 <img src="http://farm8.staticflickr.com/7038/6911538065_da2e1924e4_o.png" />
 </figure>
 <p>Test analysis on model fit:</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 <span class="kw">load</span>(<span class="st">&quot;zoom.rda&quot;</span>)
 L &lt;-<span class="st"> </span><span class="kw">length</span>(<span class="kw">unique</span>(dat$reps))
 <span class="kw">library</span>(snow)
@@ -149,7 +149,7 @@ models &lt;-<span class="st"> </span><span class="kw">parLapply</span>(cluster, 
 <span class="kw">stopCluster</span>(cluster)
 <span class="kw">save</span>(<span class="st">&quot;models&quot;</span>, <span class="dt">file=</span><span class="st">&quot;models.rda&quot;</span>)</code></pre>
 <p>Once this step is complete, we can create the distribution of different indicators</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
  <span class="kw">load</span>(<span class="st">&quot;zoom.rda&quot;</span>)
  <span class="kw">load</span>(<span class="st">&quot;models.rda&quot;</span>)
 <span class="co"># plot indicators</span>

@@ -113,7 +113,7 @@
 <li><p>Updated pmc to <a href="https://github.com/cboettig/pmc/commit/f86ca7bfc74af7690c18e1f25184051295edfdf9">handle errors</a> (mostly from svd failures in geiger). Also updated vignette.</p></li>
 </ul>
 <p>Failing to declare the XML namespace was causing my simple xml parsing example to fail.</p>
-<pre class="sourceCode R"><code class="sourceCode r">
+<pre class="sourceCode r"><code class="sourceCode r">
 thing =<span class="st"> </span><span class="kw">xmlParse</span>(<span class="kw">getURL</span>(&amp;quot;https:<span class="er">//</span>github.com/cboettig/pmc/commits/master.atom&amp;quot;))
 nds =<span class="st"> </span><span class="kw">getNodeSet</span>(thing, <span class="st">&#39;//x:entry&#39;</span>, <span class="dt">namespaces =</span> <span class="kw">c</span>(<span class="dt">x=</span><span class="st">&#39;http://www.w3.org/2005/Atom&#39;</span>))
 <span class="kw">length</span>(nds)</code></pre>

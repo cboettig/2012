@@ -111,7 +111,6 @@
 <pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&quot;http://www.carlboettiger.info/assets/data/mei.csv&quot;</span>, <span class="dt">header=</span><span class="ot">TRUE</span>)</code></pre>
 <!-- html table generated in R 2.15.2 by xtable 1.7-0 package -->
 <!-- Mon Dec 17 15:31:58 2012 -->
-
 <p>For the moment let’s ignore annual structure and just collapse this into timeseries sampled bimonthly.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(reshape2)
 dt &lt;-<span class="st"> </span><span class="kw">melt</span>(dat, <span class="dt">id=</span><span class="st">&quot;YEAR&quot;</span>)

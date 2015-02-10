@@ -128,8 +128,8 @@
 <p><span class="math">\[y_n = \ln \left(\frac{R_t}{S_{t-1}}\right) \]</span> <span class="math">\[ x_n = \left[ 1 \choose -S_{t-1} \right] \]</span> <span class="math">\[ a_n = \left[ \alpha_t \choose \beta_t \right] \]</span></p>
 <p>Their annual review, (Walters &amp; Hilborn, 1978), is a nice broad perspective without details for implementation. Surprised that ch 8 of Walters 86 textbook doesn’t get beyond the basics of Bellman’s value iteration. Mangel’s 1985 <a href="http://www.amazon.com/Decision-uncertain-resource-Mathematics-Engineering/dp/0124687202/ref=ntt_at_ep_dpt_3">edited volume</a> seems to do a nice job (but the Google copy doesn’t quite cut it).</p>
 <h2 id="two-armed-bandit-problem">Two-armed bandit problem</h2>
-<p>Imagine machine 1 has payoff $ <em>1 $ with unknown probability $ p</em>1 <span class="math">\(, machine 2 has payoff \)</span> <em>2 $ with known probability $ p</em>2 $.</p>
-<p>Pr( <span class="math">\(k \)</span> wins in <span class="math">\(m \)</span> gambles $ | p_1 $ ) is <code>dbinom(k, m, p_1)</code> and we need a good prior density <span class="math">\(f(p_1) \)</span> as <code>dbeta(x, alpha, beta)</code> such that the posterior is also a beta density.</p>
+<p>Imagine machine 1 has payoff $ _1 $ with unknown probability $ p_1 $, machine 2 has payoff $ _2 $ with known probability $ p_2 $.</p>
+<p>Pr( $k $ wins in $m $ gambles $ | p_1 $ ) is <code>dbinom(k, m, p_1)</code> and we need a good prior density $f(p_1) $ as <code>dbeta(x, alpha, beta)</code> such that the posterior is also a beta density.</p>
 <p>The value-to-go in the SDP solution is a function of the distribution parameters of the prior,</p>
 <p><span class="math">\[J_n(\alpha,\beta) = \max\left( \alpha_2 p_2 , \alpha_1 \frac{\alpha}{\alpha + \beta}\right) \]</span>,</p>
 <p>which just the integral over the posterior at that time, since no further information will be gained. We can compute the earlier steps from this.</p>
