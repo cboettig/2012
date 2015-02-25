@@ -156,14 +156,14 @@ d prior fixed</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r">pars &lt;-<span class="st"> </span><span class="kw">melt</span>(gp$trace$XX[[<span class="dv">1</span>]], <span class="dt">id =</span> <span class="st">&quot;index&quot;</span>)
 <span class="kw">ggplot</span>(pars, <span class="kw">aes</span>(index, value)) +<span class="st"> </span><span class="kw">geom_line</span>() +<span class="st"> </span><span class="kw">facet_wrap</span>(~variable, <span class="dt">scales=</span><span class="st">&quot;free_y&quot;</span>)</code></pre>
 <figure>
-<img src="/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5" /><figcaption>plot of chunk unnamed-chunk-5</figcaption>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5" /><figcaption>plot of chunk unnamed-chunk-5</figcaption>
 </figure>
 <p>It is possible to calculate summary statistics and check out the distribution of these fellows.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(gp$trace$XX[[<span class="dv">1</span>]][,<span class="st">&quot;nug&quot;</span>])</code></pre>
 <pre><code>[1] 0.009755</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(pars, <span class="kw">aes</span>(value)) +<span class="st"> </span><span class="kw">geom_histogram</span>() +<span class="st"> </span><span class="kw">facet_wrap</span>(~variable, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
 <figure>
-<img src="/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6" /><figcaption>plot of chunk unnamed-chunk-6</figcaption>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6" /><figcaption>plot of chunk unnamed-chunk-6</figcaption>
 </figure>
 <h2 id="extracting-the-estimated-process">Extracting the estimated process</h2>
 <p>(The <strong>MAP</strong>, maximum a posteriori expected mean and variance).</p>
@@ -183,7 +183,7 @@ dat &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class
     p1 &lt;-<span class="st"> </span>p1 +<span class="st"> </span><span class="kw">geom_line</span>(<span class="dt">data =</span> true, <span class="kw">aes</span>(x, y), <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">lty =</span> <span class="dv">2</span>) 
 p1 +<span class="st"> </span>theme_notebook</code></pre>
 <figure>
-<img src="/assets/figures/2012-12-04-046b509f8d-gp-plot.png" alt="plot of chunk gp-plot" /><figcaption>plot of chunk gp-plot</figcaption>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-gp-plot.png" alt="plot of chunk gp-plot" /><figcaption>plot of chunk gp-plot</figcaption>
 </figure>
 <p>Find the actual optimum policy from the true parametric model</p>
 <pre class="sourceCode r"><code class="sourceCode r">x_grid &lt;-<span class="st"> </span>dat$x
@@ -212,7 +212,7 @@ policy_plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(policie
 <span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span><span class="kw">xlab</span>(<span class="st">&quot;stock size&quot;</span>) +<span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;escapement&quot;</span>) 
 policy_plot +<span class="st"> </span>theme_notebook</code></pre>
 <figure>
-<img src="/assets/figures/2012-12-04-046b509f8d-policy_plot.png" alt="plot of chunk policy_plot" /><figcaption>plot of chunk policy_plot</figcaption>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-policy_plot.png" alt="plot of chunk policy_plot" /><figcaption>plot of chunk policy_plot</figcaption>
 </figure>
 <p>We can see what happens when we attempt to manage a stock using this:</p>
 <pre class="sourceCode r"><code class="sourceCode r">z_g &lt;-<span class="st"> </span>function() <span class="kw">rlnorm</span>(<span class="dv">1</span>,<span class="dv">0</span>, sigma_g)
@@ -225,7 +225,7 @@ df &lt;-<span class="st"> </span><span class="kw">melt</span>(df, <span class="d
 simplot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(df) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(time,value, <span class="dt">color=</span>variable))
 simplot +<span class="st"> </span>theme_notebook</code></pre>
 <figure>
-<img src="/assets/figures/2012-12-04-046b509f8d-simplot.png" alt="plot of chunk simplot" /><figcaption>plot of chunk simplot</figcaption>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-simplot.png" alt="plot of chunk simplot" /><figcaption>plot of chunk simplot</figcaption>
 </figure>
 
     </article>
@@ -275,7 +275,7 @@ simplot +<span class="st"> </span>theme_notebook</code></pre>
   
 
   <br/>
-  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/8864287043fe69bb3ef68c22423eb9987a4e0768/_posts/2012-12-04-tgp-mcmc-for-gaussian-processes.md"> 8864287043fe69bb3ef68c22423eb9987a4e0768</a></small></p>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/82c8cce4e4d61b962584a0473bb444c47ed78204/_posts/2012-12-04-tgp-mcmc-for-gaussian-processes.md"> 82c8cce4e4d61b962584a0473bb444c47ed78204</a></small></p>
     
   <br/>
   

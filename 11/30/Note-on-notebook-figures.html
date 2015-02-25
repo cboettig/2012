@@ -110,13 +110,13 @@
 <p>I have started uploading images to my own server, rather than flickr. Programmatically, this is just a matter of switching the knitr upload function:</p>
 <pre class="sourceCode r"><code class="sourceCode r">opts_knit$<span class="kw">set</span>(<span class="dt">upload.fun =</span> socialR::notebook.url)</code></pre>
 <p>from my custom <a href="https://github.com/cboettig/socialR/blob/299f4aeb8cc1a9b31c761dc7c9b14b1d73f7ef25/R/custom_knit.R">flickr.url</a> function (a wrapper to <code>Rflickr</code>) to a custom function <a href="https://github.com/cboettig/socialR/blob/e9a30fd6381c1a8147cbaec0e3886d559de6d48c/R/notebook.R">notebook.url</a> using a system call to <code>cp</code> (to my local jekyll notebook) and <code>rsync</code> (so the figure displays before my next jekyll push).</p>
-<p>The new script names image by date and the first 10 characters of the sha hash, as well as the knitr chunk name. This way multiple runs tweaking an individual file are not recorded as separate files if no commits are made to the repository, but every commit is guaranteed to link to a unique set of figures (unless the chunk is loaded from cache and does not generate a new image). All figures also <a href="http://www.carlboettiger.info/assets/figures/">appear sorted by date on the webserver</a> in the manner. I could probably put some lightweightphotobrowser on the server, if browsing images serves any purpose.</p>
+<p>The new script names image by date and the first 10 characters of the sha hash, as well as the knitr chunk name. This way multiple runs tweaking an individual file are not recorded as separate files if no commits are made to the repository, but every commit is guaranteed to link to a unique set of figures (unless the chunk is loaded from cache and does not generate a new image). All figures also <a href="http://www.carlboettiger.info/2012/assets/figures/">appear sorted by date on the webserver</a> in the manner. I could probably put some lightweightphotobrowser on the server, if browsing images serves any purpose.</p>
 <p>The real reason for the change is to maintain the images in my labnotebook directory, such that the directory is a complete archive that can exist independent of web services such as flickr. The images aren’t included in the git management for obvious reasons. My current archiving on figshare has simple involved zipping up the markdown versions of all my posts by year (in _posts). If I continue in this way, I should need to archive the <code>figures/</code> directory along with it. Perhaps I should archive the entire Jekyll directory instead.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
 <p>An alternative strategy would be to upload each figure to figshare directly in the same way I was doing with flickr. While this has the advantage of clockss archiving, mostly I’m not sure that I should flood my figshare account in this way. I really don’t need a different doi for every attempt to create a figure (just as I’ve decided not to archive each notebook entry as a separate figshare object.)</p>
 <h3 id="plot-appearance-transparency-in-the-notebook">Plot appearance (transparency) in the notebook</h3>
 <p>It’s not easy to generate figures that display nicely in both dark and light themes (well, I should just tell ggplot to use a solarized set of theme colors, but I’m too lazy to write that). Meanwhile, just setting the transparent background to the plot, and transparent grid lines against the grey boxes seems to do pretty well:</p>
 <figure>
-<img src="/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-6.png" alt="Example transparent plot" /><figcaption>Example transparent plot</figcaption>
+<img src="/2012/assets/figures/2012-12-04-046b509f8d-unnamed-chunk-6.png" alt="Example transparent plot" /><figcaption>Example transparent plot</figcaption>
 </figure>
 <p>This is accomplished with the codeblock below. Note that we need to tell <code>knitr</code> chunks to set the background of the png device to transparent, as well as telling ggplot what we want to be transparent:</p>
 <pre class="sourceCode r"><code class="sourceCode r">opts_chunk$<span class="kw">set</span>(<span class="dt">dev.args=</span><span class="kw">list</span>(<span class="dt">bg=</span><span class="st">&quot;transparent&quot;</span>))
@@ -182,7 +182,7 @@ theme_notebook &lt;-<span class="st"> </span>
   
 
   <br/>
-  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/8864287043fe69bb3ef68c22423eb9987a4e0768/_posts/2012-11-30-Note-on-notebook-figures.md"> 8864287043fe69bb3ef68c22423eb9987a4e0768</a></small></p>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/82c8cce4e4d61b962584a0473bb444c47ed78204/_posts/2012-11-30-Note-on-notebook-figures.md"> 82c8cce4e4d61b962584a0473bb444c47ed78204</a></small></p>
     
   <br/>
   

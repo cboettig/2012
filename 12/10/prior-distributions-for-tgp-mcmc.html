@@ -166,7 +166,7 @@ priors &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span cl
 priors &lt;-<span class="st"> </span><span class="kw">melt</span>(priors, <span class="dt">id=</span><span class="st">&quot;x&quot;</span>)
 <span class="kw">ggplot</span>(priors) +<span class="st"> </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(x, value)) +<span class="st"> </span><span class="kw">facet_wrap</span>(~variable, <span class="dt">scale=</span><span class="st">&quot;free&quot;</span>)</code></pre>
 <figure>
-<img src="/assets/figures/2012-12-10-9b2d792442-unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5" /><figcaption>plot of chunk unnamed-chunk-5</figcaption>
+<img src="/2012/assets/figures/2012-12-10-9b2d792442-unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5" /><figcaption>plot of chunk unnamed-chunk-5</figcaption>
 </figure>
 <pre class="sourceCode r"><code class="sourceCode r">gp &lt;-<span class="st"> </span><span class="kw">bgp</span>(<span class="dt">X=</span>x, <span class="dt">XX=</span>X, <span class="dt">Z=</span>y, <span class="dt">verb=</span><span class="dv">0</span>,
           <span class="dt">meanfn=</span><span class="st">&quot;constant&quot;</span>, <span class="dt">bprior=</span><span class="st">&quot;b0&quot;</span>, <span class="dt">BTE=</span><span class="kw">c</span>(<span class="dv">2000</span>,<span class="dv">6000</span>,<span class="dv">2</span>), <span class="dt">m0r1=</span><span class="ot">FALSE</span>, 
@@ -194,7 +194,7 @@ tgp_dat &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span c
 <span class="st">    </span><span class="kw">geom_line</span>(<span class="dt">dat =</span> manual_dat, <span class="kw">aes</span>(x, y), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)  +<span class="st"> </span><span class="co">#MEAN    </span>
 <span class="st">    </span><span class="kw">theme_bw</span>() +<span class="st"> </span><span class="kw">theme</span>(<span class="dt">plot.background =</span> <span class="kw">element_rect</span>(<span class="dt">fill =</span> <span class="st">&quot;transparent&quot;</span>,<span class="dt">colour =</span> <span class="ot">NA</span>))</code></pre>
 <figure>
-<img src="/assets/figures/2012-12-10-9b2d792442-gp-plot.png" alt="plot of chunk gp-plot" /><figcaption>plot of chunk gp-plot</figcaption>
+<img src="/2012/assets/figures/2012-12-10-9b2d792442-gp-plot.png" alt="plot of chunk gp-plot" /><figcaption>plot of chunk gp-plot</figcaption>
 </figure>
 <h2 id="posteriors-of-hyperparameters">Posteriors of hyperparameters</h2>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(reshape2)
@@ -202,7 +202,7 @@ hyperparameters &lt;-<span class="st"> </span><span class="kw">c</span>(<span cl
 posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(gp$trace$XX[[<span class="dv">1</span>]][,hyperparameters], <span class="dt">id=</span><span class="st">&quot;index&quot;</span>)
 <span class="kw">ggplot</span>(posteriors) +<span class="st"> </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(value)) +<span class="st"> </span><span class="kw">facet_wrap</span>(~variable, <span class="dt">scales=</span><span class="st">&quot;free&quot;</span>)</code></pre>
 <figure>
-<img src="/assets/figures/2012-12-10-9b2d792442-unnamed-chunk-9.png" alt="plot of chunk unnamed-chunk-9" /><figcaption>plot of chunk unnamed-chunk-9</figcaption>
+<img src="/2012/assets/figures/2012-12-10-9b2d792442-unnamed-chunk-9.png" alt="plot of chunk unnamed-chunk-9" /><figcaption>plot of chunk unnamed-chunk-9</figcaption>
 </figure>
 
     </article>
@@ -256,7 +256,7 @@ posteriors &lt;-<span class="st"> </span><span class="kw">melt</span>(gp$trace$X
   
 
   <br/>
-  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/8864287043fe69bb3ef68c22423eb9987a4e0768/_posts/2012-12-10-prior-distributions-for-tgp-mcmc.md"> 8864287043fe69bb3ef68c22423eb9987a4e0768</a></small></p>
+  <p><small> <i class="icon-barcode"></i> SHA Hash: <a href="https://github.com/cboettig/2012/commit/82c8cce4e4d61b962584a0473bb444c47ed78204/_posts/2012-12-10-prior-distributions-for-tgp-mcmc.md"> 82c8cce4e4d61b962584a0473bb444c47ed78204</a></small></p>
     
   <br/>
   
